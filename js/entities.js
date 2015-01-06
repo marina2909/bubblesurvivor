@@ -1,11 +1,8 @@
 function Entities(){ 
-	var timeToLiveGood = 200; 
-	var timeToLiveEvil = 200;
-
 	var goodbubbles = [];
 	var evilbubbles = [];
+	var pointbubbles = [];
 	var onUpdate = function(){};
-	var airElem = $('.points');
 	var air;
 	
 	function update(player){
@@ -13,28 +10,32 @@ function Entities(){
 		air = 0;
 		
 		// add some bubbles, make sure they don't collide
-		addBubble('good', timeToLiveGood, player);
-		addBubble('evil', timeToLiveEvil, player);
+		addBubble('good', player, app.probabilityGood);
+		addBubble('evil', player, app.probabilityEvil);
+		addBubble('point', player, app.probabilityPoint);
 		
-		// update time to live
-		goodbubbles.forEach(function(bubble){
-			bubble.update();
-			if (bubble.status == 'active' && collides(player, bubble)){
-				air += bubble.air;
-				bubble.startDissapearnig();
-			}
-		});
+		//check collisions between player and good bubbles and player and bullets
+		handleBubbleCollision(player, goodbubbles);
 		
-		// filter active goodbubbles
+		// filter active good bubbles
 		goodbubbles = goodbubbles.filter(function(bubble){
 			return bubble.status != 'dead';;
 		});
 		
-		// check collisions between player and bubbles
-		evilbubbles.forEach(function(bubble){
+		// check collisions between player evil bubbles and bubbles and bullets
+		handleBubbleCollision(player, evilbubbles);
+		
+		// filter active evil bubbles
+		evilbubbles = evilbubbles.filter(function(bubble){
+			return bubble.status != 'dead';
+		});	
+
+
+		// check collisions between player and points and bullets
+		pointbubbles.forEach(function(bubble){
 			bubble.update();
 			if (bubble.status == 'active' && collides(player, bubble)){
-				air += bubble.air;
+				app.points += 1;
 				bubble.startDissapearnig();
 			}
 			app.bullets.forEach(function(bullet){
@@ -44,12 +45,13 @@ function Entities(){
 			});
 		});
 		
-		// filter active evil bubbles
-		evilbubbles = evilbubbles.filter(function(bubble){
+		// filter active point bubbles
+		pointbubbles = pointbubbles.filter(function(bubble){
 			return bubble.status != 'dead';
-		});			
+		});	
+
 		
-		// bullets
+		// add bullets
 		app.bullets.forEach(function(bullet){
 			bullet.update();
 		});
@@ -71,20 +73,30 @@ function Entities(){
 			bubble.draw();
 		});
 		
+		pointbubbles.forEach(function(bubble){
+			bubble.draw();
+		});
+		
 		app.bullets.forEach(function(bullet){
 			bullet.draw();
 		});
 	}
 	
 	
-	function addBubble(type, timeToLive, player){
-		if (Math.random() < 0.1){
+	function addBubble(type, player, probability){
+		if (Math.random() < probability){
 			
 			var bubble;
 			if (type == 'good'){
-				bubble = new GoodBubble(timeToLive);
+				bubble = new GoodBubble();
 			} else if (type == 'evil'){
-				bubble = new EvilBubble(timeToLive);
+				if (Math.random() < app.probabilityDead){
+					bubble = new DeadEvilBubble();
+				} else {
+					bubble = new EvilBubble();
+				}
+			} else if (type == 'point'){
+				bubble = new PointBubble();
 			}
 			
 			var col = false;
@@ -102,14 +114,40 @@ function Entities(){
 				}
 			});
 			
+			pointbubbles.forEach(function(b){
+				if (collides(b, bubble)){
+					col = true;
+					return;
+				}
+			});
+			
+			
 			if (!col && !collides(bubble, player)){
 				if (type == 'good'){
 					goodbubbles.push(bubble);
 				} else if (type == 'evil'){
 					evilbubbles.push(bubble);
+				} else if (type == 'point'){
+					pointbubbles.push(bubble);
 				}
 			}	
 		}
+	}
+	
+	
+	function handleBubbleCollision(player, bubbleArray){
+		bubbleArray.forEach(function(bubble){
+			bubble.update();
+			if (bubble.status == 'active' && collides(player, bubble)){
+				air += bubble.air;
+				bubble.startDissapearnig();
+			}
+			app.bullets.forEach(function(bullet){
+				if (bubble.status == 'active' && collides(bullet, bubble)){
+					bubble.explode();
+				}
+			});
+		});
 	}
 	
 	function collides(a, b){
