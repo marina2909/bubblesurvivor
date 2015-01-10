@@ -1,26 +1,27 @@
 function Player() {
-	var step = 10;
-	var r = 20;
-	var x = 30;
-	var y = 30;
-	var width = 28;
-	var height = 24;
+	var r = 10;
+	var x = 40;
+	var y = 40;
+	var onShoot = function(){};
 	
 	function handleInput(){
-		var left = keysDown[37];
-		var right = keysDown[39];
-		var up = keysDown[38];
-		var down = keysDown[40];
-		var space = keysDown[32];
+		var left = app.keysDown[37];
+		var right = app.keysDown[39];
+		var up = app.keysDown[38];
+		var down = app.keysDown[40];
+		var space = app.keysDown[32];
 			
-		x += left ? (-step) : (right ? step : 0 );
-		y += up ? (-step) : (down ? step : 0 );
-		if (space) shoot();
+		if (left)  x-= app.playerStep;
+		if (right) x+= app.playerStep;
+		if (up)    y-= app.playerStep;
+		if (down)  y+= app.playerStep;
+		if (space) onShoot(x + r, y);
 	}
 	
 	function update(){			
 		handleInput();
 		
+		// make sure player stays inside borders
 		if (x - r < 0) x = r;
 		if (x + r > app.canvasWidth) x = app.canvasWidth - r;
 		if (y - r < 0) y = r;
@@ -29,21 +30,21 @@ function Player() {
 
 	function draw(){ 
 		app.ctx.beginPath();
-		app.ctx.fillStyle = "black";
-		app.ctx.arc(x, y, r, 0, 2 * Math.PI);
-		app.ctx.closePath();
-		app.ctx.fill();	
-	}
-	
-	function shoot(){
-		if (app.count%2 == 0){
-			app.bullets.push(new Bullet(5, x + r/2, y));
-		}
+		app.ctx.rect(x - r, y - r, 2*r, 2*r);
+		app.ctx.fillStyle = 'yellow';
+		app.ctx.fill();
+		app.ctx.lineWidth = 4;
+		app.ctx.strokeStyle = 'black';
+		app.ctx.stroke();
+		
 	}
 	
 	return {
 		update: update,
 		draw: draw,
+		setOnShoot: function(handler){
+			onShoot = handler;
+		},
 		getX : function(){
 			return x;
 		},

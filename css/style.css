@@ -1,3 +1,17 @@
 canvas { 
 	background:url(bcg.jpg); 
+	border: 1px solid;
+}
+
+.infobox{
+	font-size: 23px;
+	background-color: rgb(164, 164, 197);
+	width: 582px;
+}
+
+.time{
+}
+
+
+.points{
 }

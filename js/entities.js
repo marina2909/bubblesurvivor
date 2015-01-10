@@ -1,148 +1,113 @@
 function Entities(){ 
-	var goodbubbles = [];
-	var evilbubbles = [];
-	var pointbubbles = [];
-	var onUpdate = function(){};
+	var bubbles = [];
+	var bullets = [];
+	var player = Player();
+	var bulletTime =  -500;
 	var air;
 	
-	function update(player){
-		
+	player.setOnShoot(function(x, y){
+		if ((app.t - bulletTime) > 500){
+			bullets.push(new Bullet(app.bulletSpeed, x, y));
+			bulletTime = app.t;
+		}
+	});
+	
+	function getRandomInt(min, max) {
+		return min + Math.floor(Math.random() * (max - min + 1));
+	};
+	
+	
+	var bubble;
+	var isBubblePushed = true;
+	function update(){
+		player.update();
 		air = 0;
 		
-		// add some bubbles, make sure they don't collide
-		addBubble('good', player, app.probabilityGood);
-		addBubble('evil', player, app.probabilityEvil);
-		addBubble('point', player, app.probabilityPoint);
+		if (isBubblePushed){  // generate bubble
+			bubble = generateBubble();
+			isBubblePushed = false;
+		}
 		
-		//check collisions between player and good bubbles and player and bullets
-		handleBubbleCollision(player, goodbubbles);
-		
-		// filter active good bubbles
-		goodbubbles = goodbubbles.filter(function(bubble){
-			return bubble.status != 'dead';;
-		});
-		
-		// check collisions between player evil bubbles and bubbles and bullets
-		handleBubbleCollision(player, evilbubbles);
-		
-		// filter active evil bubbles
-		evilbubbles = evilbubbles.filter(function(bubble){
-			return bubble.status != 'dead';
-		});	
-
-
-		// check collisions between player and points and bullets
-		pointbubbles.forEach(function(bubble){
-			bubble.update();
-			if (bubble.status == 'active' && collides(player, bubble)){
-				app.points += 1;
-				bubble.startDissapearnig();
+		var isCollision = false;
+		bubbles.forEach(function(b){
+			if (collides(b, bubble)){
+				isCollision = true;
+				return;
 			}
-			app.bullets.forEach(function(bullet){
-				if (bubble.status == 'active' && collides(bullet, bubble)){
-					bubble.explode();
-				}
-			});
-		});
+		});	
 		
-		// filter active point bubbles
-		pointbubbles = pointbubbles.filter(function(bubble){
+		if (!isCollision){
+			bubbles.push(bubble);
+			isBubblePushed = true;
+		}
+		
+		// check collisions between player and bubbles and bullets
+		handleBubbleCollision();
+		
+		// filter bubbles
+		bubbles = bubbles.filter(function(bubble){
 			return bubble.status != 'dead';
 		});	
-
 		
-		// add bullets
-		app.bullets.forEach(function(bullet){
+		// update bullets
+		bullets.forEach(function(bullet){
 			bullet.update();
 		});
 
-		app.bullets = app.bullets.filter(function(bullet){
+		// filter bullets
+		bullets = bullets.filter(function(bullet){
 			return bullet.isActive();
 		});
 	
 		app.air += air;
-		onUpdate();
 	}
 	
-	function draw(){
-		goodbubbles.forEach(function(bubble){
-			bubble.draw();
-		});
-		
-		evilbubbles.forEach(function(bubble){
-			bubble.draw();
-		});
-		
-		pointbubbles.forEach(function(bubble){
-			bubble.draw();
-		});
-		
-		app.bullets.forEach(function(bullet){
-			bullet.draw();
-		});
-	}
-	
-	
-	function addBubble(type, player, probability){
-		if (Math.random() < probability){
-			
-			var bubble;
-			if (type == 'good'){
-				bubble = new GoodBubble();
-			} else if (type == 'evil'){
-				if (Math.random() < app.probabilityDead){
-					bubble = new DeadEvilBubble();
-				} else {
-					bubble = new EvilBubble();
+	function generateBubble(){
+		var sum = 0;
+		for (var i=0; i<app.bubbleTypes.length; i++){
+			sum += app.bubbleProbabilities[i];
+			if (Math.random() < sum){
+				var bubbleType =  app.bubbleTypes[i];
+				var b;
+				if (bubbleType == 'good'){
+					b = new GoodBubble();
+				} else if (bubbleType == 'evil'){
+					b = new EvilBubble();
+				} else if (bubbleType == 'point'){
+					b = new PointBubble();
+				} else if (bubbleType == 'deadevil'){
+					b = new DeadEvilBubble();
 				}
-			} else if (type == 'point'){
-				bubble = new PointBubble();
+				return b;
 			}
-			
-			var col = false;
-			goodbubbles.forEach(function(b){
-				if (collides(b, bubble)){
-					col = true;
-					return;
-				}
-			});
-			
-			evilbubbles.forEach(function(b){
-				if (collides(b, bubble)){
-					col = true;
-					return;
-				}
-			});
-			
-			pointbubbles.forEach(function(b){
-				if (collides(b, bubble)){
-					col = true;
-					return;
-				}
-			});
-			
-			
-			if (!col && !collides(bubble, player)){
-				if (type == 'good'){
-					goodbubbles.push(bubble);
-				} else if (type == 'evil'){
-					evilbubbles.push(bubble);
-				} else if (type == 'point'){
-					pointbubbles.push(bubble);
-				}
-			}	
 		}
 	}
 	
+	function draw(){
+		bubbles.forEach(function(bubble){
+			bubble.draw();
+		});
+
+		bullets.forEach(function(bullet){
+			bullet.draw();
+		});
+		
+		player.draw();	
+	}
 	
-	function handleBubbleCollision(player, bubbleArray){
-		bubbleArray.forEach(function(bubble){
+	function handleBubbleCollision(){
+		bubbles.forEach(function(bubble){
 			bubble.update();
 			if (bubble.status == 'active' && collides(player, bubble)){
-				air += bubble.air;
+				if (bubble instanceof PointBubble)
+					app.points += 1;
+				else if (bubble instanceof DeadEvilBubble)
+					app.air = 0; // end the game
+				else
+					air += bubble.air;
 				bubble.startDissapearnig();
 			}
-			app.bullets.forEach(function(bullet){
+			bullets.forEach(function(bullet){
 				if (bubble.status == 'active' && collides(bullet, bubble)){
 					bubble.explode();
 				}
@@ -158,9 +123,6 @@ function Entities(){
 	return {
 		update: update,
 		draw: draw,
-		setOnUpdate: function(handler){
-			onUpdate = handler;
-		},
 		getAir: function(){
 			return air;
 		}

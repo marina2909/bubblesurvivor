@@ -1,12 +1,12 @@
-$(document).ready(function(){
-	keysDown = {};
+function handleInputs(){
+	app.keysDown = {};
 	
 	addEventListener('keydown', function(e){
-		keysDown[e.keyCode] = true;
+		app.keysDown[e.keyCode] = true;
 	});
 	
 	addEventListener('keyup', function(e){
-		keysDown[e.keyCode] = false;
+		app.keysDown[e.keyCode] = false;
 	});
 
-});
+}

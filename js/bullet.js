@@ -1,6 +1,6 @@
 function Bullet(speed, x, y){
 	this.r = 3;
-	this.color = 'black';
+	this.color = 'red';
 	this.x = x;
 	this.y = y;
 	
@@ -23,8 +23,8 @@ function Bullet(speed, x, y){
 	
 	this.draw = function(){
 		app.ctx.beginPath();
-		app.ctx.fillStyle = this.color;
-		app.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+		app.ctx.fillStyle = this.color; 
+		app.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
 		app.ctx.closePath();
 		app.ctx.fill();
 	}
