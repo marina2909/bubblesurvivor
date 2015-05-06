@@ -1,0 +1,131 @@
+- nestaje polje crne rupe+
+- bug kod metaka, kad je metak na rubu gore podupla se+
+- crna rupa ne bi trebala ubiti cim je se okrzne? tek kad taknem sredinu.
+- kad sam s desne strane crne rupe ne privlaci me ?
+- avion se crta ispod cre rupe. Napravit da se crta zadnji +
+- app.bubbleDistance ne radi dobro +
+- poljepsat animaciju za crnu rupu+
+- nek se metci rjedje generiraju+
+- ne pucati dok animiram +
+- napraviti da covjen ne mora stisnut misem ako hoce novu igru igrati+
+- metci kao slike+
+- napravit da se plava povecava smanjuje+
+- bubble speed se povecava+
+- dodat zvuk+
+- kad ostanem bez kisika you lose bez buttona+
+- brojke kad se pokupi?
+- blackholefield slika+
+
+
+
+
+
+
+
+- tec na dugmici niej na sredini
+- nek bude full screen na sredini- crna rupa nek uvuce ranije
+- polje crne rupe popraviti ?
+- txt nek  bude na sredini
+- smrt od vremena
+- vrijeme nek otjece
+
+
+- napraviti sa strane graf energije gdje ce biti definiran maximum. Kad predje neki minimum blinkat ce - vidit druge igre + 
+- definirati mjenjanje brzine i levela:
+		- konstantu svakih koliko se brzina promjeni i za koliko
+		- definirat koliko kako mjenjati pointove +1, +2
+- zvuk kad ostanem bez vremena + 
+- definirat eksploziju playera kad ostanem bez vremena+
+- popraviti sliku polja crne rupe+
+- definirat grav konstantu za playera i metke
+- polje crne rupe nek bude slika i nek bude i crna rupa i polje u jednoj sliji
+- neka kamen ne moze se upucat +
+- razmotrit koliziju metka i playera i onda si uzet malo energije - dodat oduzimanej i zvuk!!!
+- ograniciti maxtime na maksimalnu vrijednost + 
+- makniti gornji infobar skroz + 
+- staviti points dolje
+- bug kad crna rupa usisa i onda ostane crtica i cuje se tik tak + 
+- mozda razrijedit metke +
+- calculateBlackHoleField popraviti + 
+- pomakniti width i height zbog diagrama +
+- crna rupa se prebrzo rotira +
+- background popraviti+
+- centrirati ja screen+
+- boja pointsa
+- soind on offd
+
+
+
+
+
+- 2014-04-24
+- handleInput promjeniti ime + 
+- sve sounsove staviti u jedan objekt+
+- energy bar umjesto diagram i staviti to u poseban objekat+
+- audio element kopirati i ne loadati svaki put
+- cijeli input handler izvaditi iz playera, polayer ne mora znati dugmice na tastaturi+
+- remainTime neka bude u skladu sa imenom koje je za trenutni 'diagram'  (novo ce biti energy)+
+- prije updateState(dt) u loop-u staviti inputHandler+
+- rjesit se t0+
+- rjesit se globLNIH varijabli koristeci closure kako je lukic pokazao primjerom
+- rjesit se count-a i napravit  da se gleda da je proslo vrijeme a ne count, ako mi zatreba t0 nazvat ga + startTime, nikako t0- 
+- playera ograniciti bug
+- blackhole ne ususa bullet kako treba
+
+
+
+
+2014-04-30
+bindInputListeners staviti u poseban file i expozat keysDown + 
+loop ne smije ovisiti o jebenom entitiju i zavrsiti igru ako je player dead +
+- bug ostane crvena crtica kad usisa crna rupa+
+- donji dio energy bara nek bude crven i stavit da je malo manji + 
+- skuzit sto radi app.energy = (app.energy > 0) ? app.energy - dt : app.energy; i stavit u energy objekt+
+- handleInput() rjesitx se toga i stavit u updatestate + 
+- u draw funkciji entities.player.getStatus() == 'active' ne treba gledat playera nego stanje igre+
+- promjenit mjenjenjanje background positiona da ovisi o vremenu a ne o broju frameova + 
+- points staviti border i makniti 'Points' i stavit vise u kut da ne smeta. stavit da bude ne vidljivo na kraju jer vec pise totalpoints+
+- bug sa horizontalnim scrollbarom +
+- energy.makeSound(); makniti iz draw +
+- app.ctx.fillStyle  postaviti samo jednom kad crtam pointse a ne na svaki frame +
+- pointse stavit na lijevo dolje probati. definirat poziciju u postocima od widtha i heighta+
+- _blackHoleOccurency maknit iz update state i staviti u app +
+- stanje igre i konstante odvbojiti i ne da sve ide u app. npr gameState moze bit stanje igre +
+- povecavanje bubblespeeda i levela stavit u konstane. stavit mnozenje sa reciprocnim brojevima umjesto djeljenja +
+- updatestate neka prima keysdown, ne mora znat da je to globalno +
+- draw poseban file- bindanje evenata u poseban file isto +
+- fallingSound promjenit ime
+- 	
+		a.filter(function(x) {
+			return x=='marina';
+		}).forEach(function(x) {
+			bla
+		});
+promjenit kod na ovo
+- micat pizdarije iz arraya sa funkcijom filter. npr kad micem metak iz arraya	+	
+ - bug na kraju player kad umire ne bude na istom mjestu +
+ - avion se ne minimizira +
+ 
+ 
+ - keysDown spremiti u poseban objekt i rjesit se globalne varijable. maknit stvari koje ne pasy iz tog filea sad +
+ - nista ne smije biti ovisno o frame rateu. npr brzina
+ - bubble.getX() stavit gettere
+ - bubble implode i explosion nek imaju istu logiku
+ - bubble.getAir() promjenit u bubble energy
+ - 				if (bubble instanceof GoodBubble){
+					sounds.bubbleSound.play();
+					gameState.energy += bubble.getAir() * 1000;
+				} else if (bubble instanceof EvilBubble){
+					sounds.bubbleSound.play();
+					gameState.energy -= bubble.getAir() * 1000;
+					
+-spojity u jedno pa da good i evil imaju u sebi energy minus ili plus
+-1000 ne smije bti hardkodirano a mogu ii izbaciti
+-energy objekt nek sadrzi energy, nek ima metodu add, globalno app.energy = new Energy(), stavit metodu koja provjeri da li je energija mrtva
+- player koji umire je poseban objekt
+- pozadina nek ide na lijevo
+- nek blinka kad dodje na crveno i nek bude malo crveno
+- filter filtrira SAMO ONE IZVAN EKRANA, kad recimo kolidira na licu mjesta ga maknit
+- proucit map u kombinaciji s filterom
+- add new bubble u novi objekt i zavrepat sve funkcije koje se ticu toga
+

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="blackhole4.svg"
+   inkscape:export-filename="D:\projects\bubblesurviver\img\blackhole.png"
+   inkscape:export-xdpi="8.4638653"
+   inkscape:export-ydpi="8.4638653">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4134">
+      <stop
+         style="stop-color:#eb09a8;stop-opacity:0.54054052;"
+         offset="0"
+         id="stop4136" />
+      <stop
+         style="stop-color:#b70783;stop-opacity:0;"
+         offset="1"
+         id="stop4138" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4124">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.77477479;"
+         offset="0"
+         id="stop4126" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4128" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4106">
+      <stop
+         style="stop-color:#070707;stop-opacity:0.11711711;"
+         offset="0"
+         id="stop4108" />
+      <stop
+         style="stop-color:#080808;stop-opacity:0;"
+         offset="1"
+         id="stop4110" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4080">
+      <stop
+         style="stop-color:#040404;stop-opacity:1;"
+         offset="0"
+         id="stop4082" />
+      <stop
+         style="stop-color:#040404;stop-opacity:0;"
+         offset="1"
+         id="stop4084" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3770">
+      <stop
+         style="stop-color:#4c4c4c;stop-opacity:0.54054052;"
+         offset="0"
+         id="stop3772" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3774" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       id="filter4044"
+       x="-0.29739028"
+       width="1.5947806"
+       y="-0.29739233"
+       height="1.5947847">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="62.700803"
+         id="feGaussianBlur4046" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4124"
+       id="radialGradient4130"
+       cx="106"
+       cy="134.36218"
+       fx="106"
+       fy="134.36218"
+       r="484"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4134"
+       id="radialGradient4140"
+       cx="862"
+       cy="488.36218"
+       fx="862"
+       fy="488.36218"
+       r="170"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       id="filter4150"
+       x="-0.29217391"
+       width="1.5843478"
+       y="-0.29217391"
+       height="1.5843478">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="41.391304"
+         id="feGaussianBlur4152" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4419">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="13.331527"
+         id="feGaussianBlur4421" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="197.17415"
+     inkscape:cy="389.74761"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-midpoints="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-smooth-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="arc"
+       style="fill:url(#radialGradient4130);fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2992"
+       sodipodi:cx="106"
+       sodipodi:cy="134.36218"
+       sodipodi:rx="484"
+       sodipodi:ry="484"
+       d="m 590,134.36218 a 484,484 0 1 1 -968,0 484,484 0 1 1 968,0 z"
+       transform="translate(226,336)"
+       inkscape:export-filename="D:\projects\bubblesurviver\img\blackhole.png"
+       inkscape:export-xdpi="62.101761"
+       inkscape:export-ydpi="62.101761" />
+    <path
+       sodipodi:type="arc"
+       style="fill:url(#radialGradient4140);fill-opacity:1;stroke:none;filter:url(#filter4150)"
+       id="path4132"
+       sodipodi:cx="862"
+       sodipodi:cy="488.36218"
+       sodipodi:rx="170"
+       sodipodi:ry="170"
+       d="m 1032,488.36218 a 170,170 0 1 1 -340,0 170,170 0 1 1 340,0 z"
+       transform="translate(-530,-18.000004)"
+       inkscape:export-filename="D:\projects\bubblesurviver\img\blackhole.png"
+       inkscape:export-xdpi="62.101761"
+       inkscape:export-ydpi="62.101761" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter4044)"
+       id="path3901"
+       sodipodi:cx="395"
+       sodipodi:cy="395.36218"
+       sodipodi:rx="253"
+       sodipodi:ry="253"
+       d="m 586.40218,229.91067 a 253,253 0 1 1 -41.22243,-38.1536"
+       sodipodi:start="5.5703801"
+       sodipodi:end="11.631094"
+       sodipodi:open="true"
+       inkscape:export-filename="D:\projects\bubblesurviver\img\blackhole.png"
+       inkscape:export-xdpi="62.101761"
+       inkscape:export-ydpi="62.101761"
+       transform="matrix(0.14932275,0,0,0.14932275,273.01751,411.32561)" />
+    <path
+       sodipodi:type="spiral"
+       style="fill:none;stroke:#2f06ec;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.70212764000000005;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter4419)"
+       id="path4261"
+       sodipodi:cx="-1125.714"
+       sodipodi:cy="271.71631"
+       sodipodi:expansion="1"
+       sodipodi:revolution="4"
+       sodipodi:radius="381.345"
+       sodipodi:argument="-35.198517"
+       sodipodi:t0="0"
+       d="m -1125.714,271.71631 c -11.4935,8.57527 -17.2298,-11.26231 -14.2526,-19.10299 8.0678,-21.24778 36.7048,-20.6879 52.4586,-9.40233 28.1798,20.18724 25.7998,61.62221 4.552,85.81429 -31.182,35.50285 -86.8976,31.11857 -119.17,-0.29834 -43.0139,-41.8738 -36.5287,-112.30267 5.1487,-152.52559 52.4468,-50.61643 137.7702,-41.98697 185.8813,9.99901 58.26884,62.96198 47.47303,163.27308 -14.8494,219.23688 -73.4448,65.95141 -188.7979,52.97671 -252.5925,-19.69966 -73.6534,-83.90775 -58.4921,-214.33757 24.55,-285.948188 94.3576,-81.368536 239.8875,-64.015567 319.30382,29.400328 89.09314,104.79852 69.54502,265.44494 -34.25066,352.65949 -115.23286,96.82468 -291.00806,75.0789 -386.01516,-39.101 -104.5615,-125.66239 -80.6162,-316.57551 43.9513,-419.370781 136.0883,-112.302346 342.14647,-86.156159 452.72648,48.801656 120.04644,146.511145 91.69825,367.720085 -53.65199,486.082085 -156.93179,127.79311 -393.29599,97.24206 -519.43769,-58.50232"
+       transform="translate(1457.714,198.64587)"
+       inkscape:export-filename="D:\projects\bubblesurviver\img\blackhole.png"
+       inkscape:export-xdpi="62.101761"
+       inkscape:export-ydpi="62.101761" />
+  </g>
+</svg>

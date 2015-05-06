@@ -2,19 +2,51 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+		<script src="js/loadimg.js"></script>
+		<script src="js/appconstants.js"></script>
+		<script src="js/soundpool.js"></script>
+		<script src="js/sounds.js"></script>
+		<script src="js/keysDown.js"></script>
+		<script src="js/energy.js"></script>
+		<script src="js/sprite.js"></script>
 		<script src="js/entity.js"></script>
 		<script src="js/circle.js"></script>
+		<script src="js/explosion.js"></script>
 		<script src="js/player.js"></script>
 		<script src="js/entities.js"></script>
-		<script src="js/infobar.js"></script>
 		<script src="js/bullet.js"></script>
 		<script src="js/bubble.js"></script>
+		<script src="js/updatestate.js"></script>
+		<script src="js/draw.js"></script>
 		<script src="js/game.js"></script>
-	<div class="infobox">
-		<span>Time: </span><span class="time"></span>
-		<span>&nbsp &nbsp  Points: </span><span class="points"></span>
-	</div>
+
 	<body onload="load()">
-		<canvas id="canvas" width="580" height="580"></canvas>
+		<div class="main">	
+			<canvas id="mainCanvas"></canvas>
+			<div class="start">
+				<input type="button" id="startbtn" value="Start"/>
+			</div>
+		</div>
+		
+		<div class="finish">
+			<div class="finishTxt">You lose</div>
+			<div class="totalPoints"></div>
+			<input type="button" id="restartbtn" value="Start new game"/>
+		</div>
+		  <audio id='blackholeSound'>
+			<source src='sounds/blackhole.wav' type='audio/wav'>
+		</audio>
+		  <audio id='explosionSound'>
+			<source src='sounds/explosion.wav' type='audio/wav'>
+		</audio>
+		 <audio id='bubbleSound'>
+			<source src='sounds/bubble.wav' type='audio/wav'>
+		</audio>
+		<audio id='pointSound'>
+			<source src='sounds/point.wav' type='audio/wav'>
+		</audio>
+		<audio id='shootSound'>
+			<source src='sounds/shoot.wav' type='audio/wav'>
+		</audio>
 	</body>
 </html>
