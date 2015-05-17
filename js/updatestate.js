@@ -29,7 +29,7 @@ var updateState = (function(){
 			if(_newBubble instanceof BlackHole){
 				distance = app.distanceFromBlackHole;
 			} 
-			if (Math.pow(_newBubble.getX() - b.getX(), 2) + Math.pow(_newBubble.getY() - b.getY(), 2) < 
+			if (Math.pow(_newBubble.x - b.x, 2) + Math.pow(_newBubble.y - b.y, 2) < 
 				Math.pow(distance + b.getRCollision() + _newBubble.getRCollision(), 2))
 			{
 				isCollision = true;
@@ -38,7 +38,7 @@ var updateState = (function(){
 		}, this);
 
 		entities.blackHoles.forEach(function(b){
-			if (Math.pow(_newBubble.getX() - b.getX(), 2) + Math.pow(_newBubble.getY() - b.getY(), 2) < 
+			if (Math.pow(_newBubble.x - b.x, 2) + Math.pow(_newBubble.y - b.y, 2) < 
 				Math.pow(app.distanceFromBlackHole + b.getRCollision() + _newBubble.getRCollision(), 2))
 			{
 				isCollision = true;
@@ -71,11 +71,11 @@ var updateState = (function(){
 	
 	function _filter(){
 		entities.bubbles = entities.bubbles.filter(function(bubble){
-			return bubble._status != 'dead' && bubble.isInside();
+			return bubble.isInside();
 		});	
 
 		entities.blackHoles = entities.blackHoles.filter(function(bubble){
-			return bubble.getStatus() != 'dead' && bubble.isInside();
+			return  bubble.isInside();
 		});	
 		
 		entities.bullets = entities.bullets.filter(function(bullet){
@@ -83,8 +83,8 @@ var updateState = (function(){
 		});
 
 		entities.explosions = entities.explosions.filter(function(explosion){
-			return explosion.isInside() && explosion.getStatus() != 'dead';
-		});	
+			return explosion.isInside();
+		});
 		
 	}
 	
@@ -96,7 +96,7 @@ var updateState = (function(){
 			var timestamp = performance.now();
 			if (timestamp - _bulletLastFire > app.bulletsDistance){
 				entities.bullets.push(
-					new Bullet(entities.player.getX() + entities.player.getW()/2 + app.bulletRadius, entities.player.getY()));
+					new Bullet(entities.player.x + entities.player.w/2 + app.bulletRadius, entities.player.y));
 				_bulletLastFire = timestamp;
 				sounds.shootSound.play();
 			}
@@ -110,8 +110,10 @@ var updateState = (function(){
 		gameState.bubbleSpeed += app.bubbleSpeedStep;
 		app.level = Math.floor((performance.now() - gameState.startTime)/app.levelChangeStep);
 		
-		entities.player.updatePosition(dt, entities, keysDown);
-
+		if (entities.player != null){
+			entities.player.updatePosition(dt, entities, keysDown);
+		}
+		
 		entities.blackHoles.forEach(function(blackHole){
 			blackHole.updatePosition(dt, entities);
 		});
@@ -124,48 +126,65 @@ var updateState = (function(){
 			bullet.updatePosition(dt, entities);
 		});	
 		
-		entities.explosions.forEach(function(explosion){
-			explosion.updatePosition(dt, entities);
+		entities.explosions = entities.explosions.filter(function(explosion){
+			return explosion.updatePosition(dt, entities);
 		});		
 		
 		
-		entities.bubbles.filter(function(bubble){
-			return bubble.getStatus() == 'active';
-		}).forEach(function(bubble){
+		entities.bubbles = entities.bubbles.map(function(bubble){
+			var b = bubble;
 			entities.bullets.forEach(function(bullet){
 				if (!(bubble instanceof PointBubble) && bubble.collides(bullet)){
-					bubble.setStatus('dead');
-					entities.explosions.push(new BubbleExplosion(bubble.getX(), bubble.getY(), bubble.getR()));
+					entities.explosions.push(new BubbleVanish(bubble.x, bubble.y, bubble.r, 'explode'));
 					sounds.explosionSound.play();
+					b = null;
 				}
 			});
+			return b;
+		}).filter(function(bubble){
+			return bubble != null;
+		});
+		
+		
+		entities.bubbles = entities.bubbles.map(function(bubble){
+			var b = bubble;
 			if (bubble.collides(entities.player)){
-				bubble.implode();
+				b = null;
+				var type = 'good';
 				if (bubble instanceof GoodBubble){
 					sounds.bubbleSound.play();
-					gameState.energy += bubble.getAir() * 1000;
+					gameState.energy += bubble.getEnergy() * 1000;
 				} else if (bubble instanceof EvilBubble){
 					sounds.bubbleSound.play();
-					gameState.energy -= bubble.getAir() * 1000;
+					gameState.energy -= bubble.getEnergy() * 1000;
+					type = 'evil';
 				} else if (bubble instanceof PointBubble){
 					sounds.pointSound.play();
 					gameState.points += bubble.getPoints();
+					type = 'point';
+					entities.explosions.push(new PointVanish(bubble.x, bubble.y, bubble.r, bubble.getPoints()));
 				}
-			
+				entities.explosions.push(new BubbleVanish(bubble.x, bubble.y, bubble.r, type));
 				gameState.energy = (gameState.energy > app.maxEnergy) ? app.maxEnergy : gameState.energy; 
 				
 				if (gameState.energy <= 0){
+					entities.explosions.push(new PlayerVanish(entities.player.x, entities.player.y, 
+					entities.player.w, entities.player.h));
+					entities.player = null;
 					sounds.dyingSound.play();
-					entities.player.startDissapearnig();
 				}
 				energy.makeSound();
-			}			
-		});	
+			}	
+			return b;
+		}).filter(function(bubble){
+			return bubble != null;
+		});
+
 		
 		entities.bullets.filter(function(bullet){
 			return bullet.collides(entities.player);
 		}).forEach(function(bullet){
-			entities.explosions.push(new BulletExplosion(bullet.getX(), bullet.getY(), app.bulletExplosionRadius));
+			entities.explosions.push(new BulletVanish(bullet.x, bullet.y, app.bulletExplosionRadius));
 			gameState.energy -= 1000;
 			sounds.bulletexplosionSound.play();
 		});
@@ -173,13 +192,14 @@ var updateState = (function(){
 		
 		entities.blackHoles.forEach(function(blackHole){
 			
-			
 			entities.bullets = entities.bullets.filter(function(bullet){
 				return !blackHole.collides(bullet);
 			});
 				
-			if (blackHole.collides(entities.player) && (entities.player.getStatus() == 'active')){
-				entities.player.startDissapearnig(blackHole);
+			if (blackHole.collides(entities.player)){
+				entities.explosions.push(new PlayerVanish(entities.player.x, entities.player.y, 
+					entities.player.w, entities.player.h, blackHole));
+				entities.player = null;
 				sounds.blackholeSound.play();
 				gameState.energy = 0;
 			}		

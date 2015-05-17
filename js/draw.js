@@ -14,7 +14,9 @@ var draw = function(){
 			bullet.draw();
 		});
 
-		entities.player.draw();
+		if (entities.player != null){
+			entities.player.draw();
+		}
 		
 		entities.explosions.forEach(function(explosion){
 			explosion.draw();

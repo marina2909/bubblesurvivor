@@ -110,8 +110,8 @@ promjenit kod na ovo
  - keysDown spremiti u poseban objekt i rjesit se globalne varijable. maknit stvari koje ne pasy iz tog filea sad +
  - nista ne smije biti ovisno o frame rateu. npr brzina
  - bubble.getX() stavit gettere
- - bubble implode i explosion nek imaju istu logiku
- - bubble.getAir() promjenit u bubble energy
+ - bubble implode i explosion nek imaju istu logiku + 
+ - bubble.getAir() promjenit u bubble energy + 
  - 				if (bubble instanceof GoodBubble){
 					sounds.bubbleSound.play();
 					gameState.energy += bubble.getAir() * 1000;
@@ -122,10 +122,11 @@ promjenit kod na ovo
 -spojity u jedno pa da good i evil imaju u sebi energy minus ili plus
 -1000 ne smije bti hardkodirano a mogu ii izbaciti
 -energy objekt nek sadrzi energy, nek ima metodu add, globalno app.energy = new Energy(), stavit metodu koja provjeri da li je energija mrtva
-- player koji umire je poseban objekt
+- player koji umire je poseban objekt+
 - pozadina nek ide na lijevo
 - nek blinka kad dodje na crveno i nek bude malo crveno
 - filter filtrira SAMO ONE IZVAN EKRANA, kad recimo kolidira na licu mjesta ga maknit
 - proucit map u kombinaciji s filterom
 - add new bubble u novi objekt i zavrepat sve funkcije koje se ticu toga
-
+- points nek bude uvijek vidljiv i vise lijevo dolje, manji font
+- startDissapearing kod playera maknit+

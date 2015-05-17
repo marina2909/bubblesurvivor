@@ -15,7 +15,7 @@ function SoundPool(poolSize, audioUrl, volume){
 
 	function _play(){
 		_currentSound = (_currentSound + 1) % _size;
-		if(_pool[_currentSound].currentTime == 0 || _pool[_currentSound].ended){
+		if(app.soundOn && (_pool[_currentSound].currentTime == 0 || _pool[_currentSound].ended)){
 			_pool[_currentSound].play();
 		}
 	}

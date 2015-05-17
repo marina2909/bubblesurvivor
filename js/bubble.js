@@ -2,7 +2,6 @@ function Bubble(){
 	Entity.call(this);
 	this._x = 5/4 * app.canvasWidth;
 	this._y = this.generateStartYPosition();
-	this._status = 'active';
 }
 Bubble.prototype = Object.create(Entity.prototype);
 Bubble.prototype.constructor = Bubble;
@@ -37,19 +36,13 @@ Bubble.prototype.generateStartYPosition = function(){
 		}
 }();
 
-Bubble.prototype.implode = function(){
-	this._startTime = performance.now();
-	this._status = 'dissapearing';
-	this._rStart = this._r;
-}
-
-Bubble.prototype.getAir = function(){
-	return this._air;
+Bubble.prototype.getEnergy = function(){
+	return this._energy;
 }
 
 Bubble.prototype.collides = function(a){
 	if (a instanceof  Bullet || a instanceof  Bubble){
-		return (Math.pow(this.getX() - a.getX(), 2) + Math.pow(this.getY() - a.getY(), 2)) < Math.pow(this.getRCollision() + a.getRCollision(), 2);
+		return (Math.pow(this.x - a.x, 2) + Math.pow(this.y - a.y, 2)) < Math.pow(this.getRCollision() + a.getRCollision(), 2);
 	}
 	if (a instanceof Player){
 		return a.collides(this);
@@ -58,19 +51,6 @@ Bubble.prototype.collides = function(a){
 Bubble.prototype.updatePosition = function(dt, entities){
 	var newPos = this.getNewPosition(this._x, this._y, -gameState.bubbleSpeed, 0, dt, 0);
 	this._x = newPos.x;
-	
-	if (this._status == 'dissapearing'){
-		this._tAnimation = (performance.now() - this._startTime) / animationDuration.bubble;
-		if (this._tAnimation > 1){
-			this._status = 'dead';
-		} else {
-            this._fAnimation = 3.3 * this._tAnimation * this._tAnimation - 2.3 * this._tAnimation;
-			this._r = this._rStart - this._rStart * this._fAnimation;
-			if (this._r < 0) this._r = 0;
-			
-			this._opacity = 1  - this._tAnimation; 
-		}
-	}
 }
 Bubble.prototype.draw = function(){
 	app.ctx.save();
@@ -83,8 +63,8 @@ function EvilBubble(){
 	Bubble.call(this);
 	var evilAirMin = 5;
 	var evilAirMax = 15;
-	this._air = getRandomInt(evilAirMin, evilAirMax);
-	this._r =  20 + 20 * (this._air - evilAirMin) / (evilAirMax - evilAirMin);
+	this._energy = getRandomInt(evilAirMin, evilAirMax);
+	this._r =  20 + 20 * (this._energy - evilAirMin) / (evilAirMax - evilAirMin);
 }
 EvilBubble.prototype = Object.create(Bubble.prototype);
 EvilBubble.prototype.constructor = EvilBubble;
@@ -94,8 +74,8 @@ function GoodBubble(){
 	Bubble.call(this);
 	var goodAirMin = 5;
 	var goodAirMax = 15;
-	this._air = getRandomInt(goodAirMin, goodAirMax);
-	this._r = 20 + 20 * (this._air - goodAirMin) / (goodAirMax - goodAirMin); 
+	this._energy = getRandomInt(goodAirMin, goodAirMax);
+	this._r = 20 + 20 * (this._energy - goodAirMin) / (goodAirMax - goodAirMin); 
 }
 GoodBubble.prototype = Object.create(Bubble.prototype);
 GoodBubble.prototype.constructor = GoodBubble;
@@ -150,13 +130,8 @@ PointBubble.prototype.spriteLights = [loadImg('img/light1.png'), loadImg('img/li
 PointBubble.prototype.updatePosition = function(dt, entities){
 	Bubble.prototype.updatePosition.apply(this, arguments);
 	this._fAnimation = Math.sin(0.005 * (performance.now()));
-	if (this._status == 'dissapearing'){
-		this._rLight = this._rLightStart - this._rLightStart * this._fAnimation;
-		if (this._rLight < 0) this._rLight = 0;
-	} else {	 
-		this._rLight = this._rLightStart + (this._rLightEnd - this._rLightStart) * this._fAnimation;
-		this._angle += this._speed * dt;
-	}
+	this._rLight = this._rLightStart + (this._rLightEnd - this._rLightStart) * this._fAnimation;
+	this._angle += this._speed * dt;
 }
 
 PointBubble.prototype.draw = function(){
@@ -166,12 +141,7 @@ PointBubble.prototype.draw = function(){
 	app.ctx.drawImage(this.sprite, - this._r, - this._r, 2 * this._r, 2 * this._r);
 	app.ctx.drawImage(PointBubble.prototype.spriteLights[this._pointNumber - 1], - this._rLight, - this._rLight, 2 * this._rLight, 2 * this._rLight);
 	app.ctx.restore();
-	
-	if (this._status == 'dissapearing'){
-		app.ctx.font="25px Georgia";
-		app.ctx.fillStyle = "white";
-		app.ctx.fillText('+' + this._points, this._x + 2 * this._r, this._y + 2 * this._r);
-	}
+
 }
 PointBubble.prototype.getRCollision = function(){
 	return this._rLight;
@@ -179,7 +149,7 @@ PointBubble.prototype.getRCollision = function(){
 
 function BlackHole(){
 	Bubble.call(this);
-	this._air = getRandomInt(app.evilAirMin, app.evilAirMax);
+	this._energy = getRandomInt(app.evilAirMin, app.evilAirMax);
 	this._r = 220;
 	this._rSmallCircle = 20;
 	this._angle = 0;
@@ -207,7 +177,7 @@ BlackHole.prototype.getRCollision = function(){
 BlackHole.prototype.collides_super = BlackHole.prototype.collides;
 BlackHole.prototype.collides = function(a){
 	if (a instanceof  Bullet){
-		return (Math.pow(this.getX() - a.getX(), 2) + Math.pow(this.getY() - a.getY(), 2)) < Math.pow(this._rSmallCircle + a.getRCollision(), 2);
+		return (Math.pow(this.x - a.x, 2) + Math.pow(this.y - a.y, 2)) < Math.pow(this._rSmallCircle + a.getRCollision(), 2);
 	} else {
 		return this.collides_super(a);
 	}

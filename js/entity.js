@@ -4,27 +4,6 @@ function Entity(){
 	this._r = 0;
 	this._x = 0;
 	this._y = 0;
-	this._status = 'active';
-	
-	this.getX = function(){
-		return this._x;
-	};
-	
-	this.getY = function(){
-		return this._y;
-	};
-	
-	this.getR = function(){
-		return this._r;
-	};
-	
-	this.getW = function(){
-		return this._w;
-	}
-	
-	this.getH = function(){
-		return this._h;
-	}
 	
 	this.setR = function(r){
 		this._r = r; 
@@ -32,18 +11,6 @@ function Entity(){
 	
 	this.setX = function(x){
 		this._x = x; 
-	}
-	
-	this.setY = function(y){
-		this._y = y; 
-	}
-	
-	this.setW = function(w){
-		this._w = w; 
-	}
-	
-	this.setH = function(h){
-		this._h = h; 
 	}
 	
 }
@@ -60,15 +27,30 @@ Entity.prototype.isInside = function(){
 	return (this._x + this._r) >= 0;
 }
 
-Entity.prototype.getStatus = function(){
-	return this._status;
-}
-Entity.prototype.setStatus = function(status){
-	return this._status = status;
-}
 Entity.prototype.getRCollision = function(){
 	return this._r;
 }
+
+Object.defineProperty(Entity.prototype, 'x', {
+	get : function(){
+		return this._x;
+	}
+});
+
+
+Object.defineProperty(Entity.prototype, 'y', {
+	get : function(){
+		return this._y;
+	},
+});
+
+Object.defineProperty(Entity.prototype, 'r', {
+	get : function(){
+		return this._r;
+	},
+});
+
+
 
 /*
 
@@ -88,8 +70,8 @@ Entity.prototype.getNewPosition = function(x1, y1, vx1, vy1, dt, gravConst){
 	
 	if (gravConst != 0){
 		entities.blackHoles.forEach(function(blackHole){	
-			var diffX = blackHole.getX() - x1;
-			var diffY = blackHole.getY() - y1;
+			var diffX = blackHole.x - x1;
+			var diffY = blackHole.y - y1;
 			var d = Math.sqrt(diffX*diffX + diffY*diffY);
 			gravvX += gravConst * diffX * dt / Math.pow(d, 3);
 			gravvY += gravConst * diffY * dt / Math.pow(d, 3);	

@@ -19,7 +19,7 @@ var app = {
 	bubbleStartSpeed : 0.1,
 	backgroundImgSpeed: 0.1,
 	
-	soundOn: true,
+	soundOn: false,
 	volume: 0.25,
 	maxEnergy: 150000
 };
