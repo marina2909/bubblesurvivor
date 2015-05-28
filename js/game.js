@@ -22,7 +22,7 @@ var entities;
 var keysDown;
 
 var resetGame = function(){
-	gameState.energy = app.maxEnergy; 
+	energy.reset();
 	gameState.points = 0;
 	gameState.bubbleSpeed = app.bubbleStartSpeed;
 	gameState.startTime = performance.now();
@@ -66,7 +66,7 @@ var loop = function() {
 	var lastFrameTime = performance.now();
 	return function(time){
 		var dt = time - lastFrameTime;
-		gameState.energy -= dt;
+		energy.add(-dt);
 		
 		updateState(dt, keysDown.getKeys());
 		draw(time - gameState.startTime);

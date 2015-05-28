@@ -11,11 +11,12 @@ function Energy(){
 	
 	var _stepEnergy = app.maxEnergy / (1000 * _tiles);
 	var _maxEnergy = app.maxEnergy / 1000;
+	var _value = app.maxEnergy;
 	
 	var _draw = function(){
 		
 		var sprite = _energyGreen;
-		var currentEnergy = gameState.energy / 1000;
+		var currentEnergy = _value / 1000;
 
 		var y = app.canvasHeight - _tileHeight;
 		for (var i = 0; i<currentEnergy; i+=_stepEnergy){ 
@@ -33,15 +34,36 @@ function Energy(){
 	}
 	
 	var _makeSound = function(){
-		if (gameState.energy > 0 && gameState.energy <= 40000){
+		if (_value > 0 && _value <= 40000){
 			sounds.clockSound.play();
-		} else if (gameState.gameOver || gameState.energy > 40000 || gameState.energy <= 0){
+		} else if (gameState.gameOver || _value > 40000 || _value <= 0){
 			sounds.clockSound.stop();
 		}
 	}
 	
+	var _add = function(val){
+		_value += val;
+		 _value = (_value > app.maxEnergy) ? app.maxEnergy : _value; 
+	}
+	
+	var _reset = function(){
+		_value = app.maxEnergy;
+	}
+	
+	var _set = function(val){
+		_value = val;
+	}
+	
+	var _isEmpty = function(){
+		return _value <= 0;
+	}
+	
 	return {
 		draw : _draw,
-		makeSound : _makeSound
+		makeSound : _makeSound,
+		add: _add,
+		reset: _reset,
+		set: _set,
+		isEmpty:_isEmpty
 	}
 }
