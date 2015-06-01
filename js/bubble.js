@@ -63,8 +63,9 @@ function EvilBubble(){
 	Bubble.call(this);
 	var evilAirMin = 5;
 	var evilAirMax = 15;
-	this._energy = getRandomInt(evilAirMin, evilAirMax);
-	this._r =  20 + 20 * (this._energy - evilAirMin) / (evilAirMax - evilAirMin);
+	this._energy = -getRandomInt(evilAirMin, evilAirMax);
+	this._r =  20 + 20 * (-this._energy - evilAirMin) / (evilAirMax - evilAirMin);
+	this._energy*=1000;
 }
 EvilBubble.prototype = Object.create(Bubble.prototype);
 EvilBubble.prototype.constructor = EvilBubble;
@@ -76,6 +77,7 @@ function GoodBubble(){
 	var goodAirMax = 15;
 	this._energy = getRandomInt(goodAirMin, goodAirMax);
 	this._r = 20 + 20 * (this._energy - goodAirMin) / (goodAirMax - goodAirMin); 
+	this._energy*=1000;
 }
 GoodBubble.prototype = Object.create(Bubble.prototype);
 GoodBubble.prototype.constructor = GoodBubble;
@@ -172,7 +174,7 @@ BlackHole.prototype.draw = function(){
 	app.ctx.restore();
 }
 BlackHole.prototype.getRCollision = function(){
-	return 2;
+	return 6;
 }
 BlackHole.prototype.collides_super = BlackHole.prototype.collides;
 BlackHole.prototype.collides = function(a){

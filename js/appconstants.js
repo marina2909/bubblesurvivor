@@ -12,14 +12,14 @@ var app = {
 	bulletExplosionRadius: 10,
 	distanceFromBlackHole: 70,
 	
-	bubbleSpeedStep: 0.000025,
+	bubbleAccStep: 0.0000025,
 	levelChangeStep: 50000,
 	playerSpeed: 0.3, 
 	bulletSpeed: 0.3, 
 	bubbleStartSpeed : 0.1,
-	backgroundImgSpeed: 0.1,
+	backgroundImgSpeed: 0.02,
 	
-	soundOn: false,
+	soundOn: true,
 	volume: 0.25,
 	maxEnergy: 150000
 };

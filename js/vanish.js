@@ -125,6 +125,7 @@ function PlayerVanish(x, y, w, h, blackHole){
 		this._hStart = h;
 		this._xEnd = blackHole.x;
 		this._yEnd = blackHole.y;
+		this._fAnimation = this._fAnimationVanish;
 	}
 	else { 
 		this._sprite = this._playerExplodeSprite;
@@ -132,27 +133,33 @@ function PlayerVanish(x, y, w, h, blackHole){
 		this._hStart = 100;
 		this._xEnd = this._xStart;
 		this._yEnd = this._yStart;
+		this._fAnimation = this._fAnimationExplode;
 	}
 	gameState.bubbleSpeed = 0;
 }
 PlayerVanish.prototype = Object.create(Vanish.prototype);
 PlayerVanish.prototype.constructor = PlayerVanish;
-PlayerVanish.prototype._playerVanishSprite = loadImg('img/playervanish.png');
+PlayerVanish.prototype._playerVanishSprite = loadImg('img/playerVanish.png');
 PlayerVanish.prototype._playerExplodeSprite = loadImg('img/playerExplode.png');
 PlayerVanish.prototype.isInside = function(){
 	return (this._x) >= 0;
 }
-PlayerVanish.prototype._fAnimation = function(t){
+PlayerVanish.prototype._fAnimationVanish = function(t){
 	return  Math.pow(t, 0.5);
 }
+PlayerVanish.prototype._fAnimationExplode = function(t){
+	return  3.3 * t * t - 2.3 * t;
+}
 PlayerVanish.prototype.updatePosition = function(dt, entities){
-	var t = (performance.now() - this._startTime) / animationDuration.blackHole;
+	var t = (performance.now() - this._startTime) / animationDuration.blackHole; 
 	if (t < 1){ 
 		this._w = this._wStart + (this._wEnd - this._wStart) * this._fAnimation(t);
 		this._h = this._hStart + (this._hEnd - this._hStart) * this._fAnimation(t); 
 
 		this._x = this._xStart + (this._xEnd - this._xStart) * this._fAnimation(t);
 		this._y = this._yStart + (this._yEnd - this._yStart) * this._fAnimation(t); 
+		
+		this._opacity = 1 - t;	
 		
 		return true;
 	} 

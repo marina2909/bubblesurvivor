@@ -7,8 +7,7 @@ var animationDuration = {
 	blackHole: 1000
 }
 
-var gameState = {
-	gameState: app.maxEnergy, 
+var gameState = { 
 	points: 0,
 	bubbleSpeed: app.bubbleStartSpeed,
 	startTime: performance.now(),
@@ -59,7 +58,7 @@ function load(){
 	document.getElementById('startbtn').focus();
 	
 	sounds = new Sounds();
-	energy = new Energy();
+	energy = energy();
 }
 
 var loop = function() {

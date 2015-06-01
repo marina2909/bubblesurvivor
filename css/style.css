@@ -8,11 +8,12 @@ body{
 	background: url(bcg.png);
 	padding-left: 0;
     padding-right: 0;
+	padding-top: 7px;
     margin-left: auto;
     margin-right: auto;
     display: block;
 	position: relative;
-	top: calc(50% - 260px);
+	top: calc(50% - 250px);
 }
 .main{
 	height: 90vh;

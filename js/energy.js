@@ -1,4 +1,4 @@
-function Energy(){	
+function energy(){	
 	var _energyGreen = loadImg('img/energyGreen.png');
 	var _energyRed = loadImg('img/energyRed.png');
 	var _energyBlank = loadImg('img/energyBlank.png');
@@ -33,14 +33,6 @@ function Energy(){
 		app.ctx.drawImage(_separator, 20, 0, 5, app.canvasHeight);
 	}
 	
-	var _makeSound = function(){
-		if (_value > 0 && _value <= 40000){
-			sounds.clockSound.play();
-		} else if (gameState.gameOver || _value > 40000 || _value <= 0){
-			sounds.clockSound.stop();
-		}
-	}
-	
 	var _add = function(val){
 		_value += val;
 		 _value = (_value > app.maxEnergy) ? app.maxEnergy : _value; 
@@ -60,7 +52,6 @@ function Energy(){
 	
 	return {
 		draw : _draw,
-		makeSound : _makeSound,
 		add: _add,
 		reset: _reset,
 		set: _set,
