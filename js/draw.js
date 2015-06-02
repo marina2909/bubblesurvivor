@@ -29,24 +29,11 @@ var draw = function(){
 	
 	return function(totalTime){
 	
-		app.ctx.clearRect(0, 0, app.canvasWidth, app.canvasHeight);
-		/*app.canvas.style.backgroundPosition = -(totalTime*app.backgroundImgSpeed) + "px";*/
-		
-		
-		/*var style = window.getComputedStyle(app.canvas);
-		var x = parseInt(style.getPropertyValue('background-position-x')) - 1;
-		app.canvas.style.backgroundPosition = "" + x + "px";*/
-		
-		/*if (ptrn == undefined){
-			ptrn = app.ctx.createPattern(background, 'repeat'); 
-		}
-		
-		app.ctx.rect(0, 0, app.canvasWidth, app.canvasHeight);
-		app.ctx.fillStyle = ptrn;
-		app.ctx.fill();	*/
-		app.ctx.drawImage(background,0,0);
-     
 
+		var x = (totalTime*app.backgroundImgSpeed )% 520;
+		app.ctx.drawImage(background,- x,-5);
+		app.ctx.drawImage(background, app.canvasWidth - x,-5);
+     
 		_drawEntities();
 		energy.draw();
 
