@@ -37,13 +37,14 @@ var draw = function(){
 		var x = parseInt(style.getPropertyValue('background-position-x')) - 1;
 		app.canvas.style.backgroundPosition = "" + x + "px";*/
 		
-		if (ptrn == undefined){
+		/*if (ptrn == undefined){
 			ptrn = app.ctx.createPattern(background, 'repeat'); 
 		}
 		
 		app.ctx.rect(0, 0, app.canvasWidth, app.canvasHeight);
 		app.ctx.fillStyle = ptrn;
-		app.ctx.fill();			
+		app.ctx.fill();	*/
+		app.ctx.drawImage(background,0,0);
      
 
 		_drawEntities();
