@@ -19,9 +19,30 @@ var sounds;
 var energy;
 var entities;
 var keysDown;
+var loop;
 
 var resetGame = function(){
+	
+	loop = function() {
+		var lastFrameTime = performance.now();
+		return function(time){
+			var dt = time - lastFrameTime;
+			energy.add(-dt);
+			
+			updateState(dt, keysDown.getKeys());
+			draw(time - gameState.startTime);
+			lastFrameTime = time;
+			if (gameState.gameOver){
+				finishGame();		
+			} else {
+				requestAnimationFrame(loop);
+			}
+		};
+	}();
+	
+	
 	energy.reset();
+	console.log(energy.getV())
 	gameState.points = 0;
 	gameState.bubbleSpeed = app.bubbleStartSpeed;
 	gameState.startTime = performance.now();
@@ -30,6 +51,7 @@ var resetGame = function(){
 	
 	requestAnimationFrame(loop);
 	entities = new Entities();
+
 }
 
 
@@ -60,23 +82,6 @@ function load(){
 	sounds = new Sounds();
 	energy = energy();
 }
-
-var loop = function() {
-	var lastFrameTime = performance.now();
-	return function(time){
-		var dt = time - lastFrameTime;
-		energy.add(-dt);
-		
-		updateState(dt, keysDown.getKeys());
-		draw(time - gameState.startTime);
-		lastFrameTime = time;
-		if (gameState.gameOver){
-			finishGame();		
-		} else {
-			requestAnimationFrame(loop);
-		}
-	};
-}();
 
 
 function finishGame(){

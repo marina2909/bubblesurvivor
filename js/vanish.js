@@ -11,7 +11,7 @@ function Vanish(x, y, r){
 }
 Vanish.prototype = Object.create(Entity.prototype);
 Vanish.prototype.constructor = Vanish;
-Vanish.prototype.updatePosition = function(dt, entities){
+Vanish.prototype.updatePosition = function(dt){
 	this._x = this.getNewPosition(this._x, this._y, -this._speed , 0, dt, 0).x;
 	var t = (performance.now() - this._startTime) / this._animationDuration;
 	if (t < 1){
@@ -91,7 +91,7 @@ PointVanish.prototype._fAnimation = function(t){
 	return  3.3 * t * t - 4 * t;
 }
 
-PointVanish.prototype.updatePosition = function(dt, entities){
+PointVanish.prototype.updatePosition = function(dt){
 	var newPos = this.getNewPosition(this._x, this._y, -this._speed , 0, dt, 0);
 	this._x = newPos.x;
 	var t = (performance.now() - this._startTime) / this._animationDuration;
@@ -150,7 +150,7 @@ PlayerVanish.prototype._fAnimationVanish = function(t){
 PlayerVanish.prototype._fAnimationExplode = function(t){
 	return  3.3 * t * t - 2.3 * t;
 }
-PlayerVanish.prototype.updatePosition = function(dt, entities){
+PlayerVanish.prototype.updatePosition = function(dt){
 	var t = (performance.now() - this._startTime) / animationDuration.blackHole; 
 	if (t < 1){ 
 		this._w = this._wStart + (this._wEnd - this._wStart) * this._fAnimation(t);

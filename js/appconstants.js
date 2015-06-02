@@ -1,5 +1,5 @@
 var app = {
-	canvasWidth: 860,
+	canvasWidth: 820,
 	canvasHeight: 520,
 	bulletRadius: 4,
 	energyWidth: 22,
@@ -19,7 +19,7 @@ var app = {
 	bubbleStartSpeed : 0.1,
 	backgroundImgSpeed: 0.02,
 	
-	soundOn: true,
+	soundOn: false,
 	volume: 0.25,
 	maxEnergy: 150000
 };

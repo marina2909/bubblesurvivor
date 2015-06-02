@@ -14,7 +14,7 @@ function Entity(){
 	}
 	
 }
-Entity.prototype.updatePosition = function(dt, entities){
+Entity.prototype.updatePosition = function(dt){
 }
 
 Entity.prototype.draw = function(dt, entities){
