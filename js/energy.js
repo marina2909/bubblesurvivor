@@ -13,14 +13,14 @@ function energy(){
 	var _maxEnergy = app.maxEnergy / 1000;
 	var _value = app.maxEnergy;
 	
+	
 	var _draw = function(){
-		
 		var sprite = _energyGreen;
 		var currentEnergy = _value / 1000;
 
 		var y = app.canvasHeight - _tileHeight;
 		for (var i = 0; i<currentEnergy; i+=_stepEnergy){ 
-			sprite = (i > 40) ? _energyGreen : _energyRed;
+			sprite = (i > 20) ? _energyGreen : _energyRed;
 			app.ctx.drawImage(sprite, 0, y, _tileWidtht, _tileHeight);
 			y -= _verticalStep;
 		}
@@ -29,6 +29,7 @@ function energy(){
 			app.ctx.drawImage(_energyBlank, 0, y, _tileWidtht, _tileHeight);
 			y -= _verticalStep;
 		}
+		
 		
 		app.ctx.drawImage(_separator, 20, 0, 5, app.canvasHeight);
 	}
