@@ -29,6 +29,7 @@ Vanish.prototype.draw = function(){
 	app.ctx.restore();
 }
 
+
 function BubbleVanish(x, y, r, type){
 	Vanish.call(this, x, y, r);
 	this._speed = gameState.bubbleSpeed;
@@ -38,32 +39,28 @@ function BubbleVanish(x, y, r, type){
 		this._rEnd = 2 * this._r;
 		this._animationDuration = animationDuration.bubbleExplosion;
 		this._fAnimation = this._fAnimationExplode;
-	} else if (type == 'good' || type == 'evil' || 'point'){
-		this._sprite = type == 'good' ? this._spriteGoodBubble : 
-					(type == 'evil' ? this._spriteEvilBubble : this._spritePointBubble); 
+	} else {
+		this._sprite = type == 'good' ? this._spriteGoodBubble : (type == 'evil' ? this._spriteEvilBubble : this._spritePointBubble); 
 		this._animationDuration = animationDuration.bubble;
-		if (type == 'point'){
-			this._fAnimation = this._fAnimationPoint;
-		} else {
-			this._fAnimation = this._fAnimationGoodEvil;
-		}
 	}
 }
 BubbleVanish.prototype = Object.create(Vanish.prototype);
 BubbleVanish.prototype.constructor = BubbleVanish;
+
 BubbleVanish.prototype._spriteGoodBubble= loadImg('img/goodbubble.png');
 BubbleVanish.prototype._spriteEvilBubble = loadImg('img/evilbubble.png');
 BubbleVanish.prototype._spritePointBubble = loadImg('img/pointbubble.png');
-BubbleVanish.prototype._spriteExplode = loadImg('img/bubbleExplosion.png');
-BubbleVanish.prototype._fAnimationGoodEvil = function(t){
+BubbleVanish.prototype._spriteExplode = loadImg('img/bubbleexplosion.png');
+
+BubbleVanish.prototype._fAnimation = function(t){
 	return  3.3 * t * t - 2.3 * t;
 }
 BubbleVanish.prototype._fAnimationExplode = function(t){
 	return Math.pow(t, 0.5);
 }
-BubbleVanish.prototype._fAnimationPoint = function(t){
-	return  3.3 * t * t - 4 * t;
-}
+
+
+
 
 function BulletVanish(x, y, r){
 	Vanish.call(this, x, y, r);

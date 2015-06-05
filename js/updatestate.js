@@ -15,9 +15,10 @@ var updateState = (function(){
 			return bullet.isInside();
 		});
 
-		entities.explosions = entities.explosions.filter(function(explosion){
+		entities.vanishings = entities.vanishings.filter(function(explosion){
 			return explosion.isInside();
 		});
+		
 		
 	}
 	
@@ -44,7 +45,7 @@ var updateState = (function(){
 		app.level = Math.floor((performance.now() - gameState.startTime)/app.levelChangeStep);
 		
 		if (entities.player != null){
-			entities.player.updatePosition(dt, entities, keysDown);
+			entities.player.updatePosition(dt, keysDown);
 		}
 		
 		entities.blackHoles.forEach(function(blackHole){
@@ -59,7 +60,7 @@ var updateState = (function(){
 			bullet.updatePosition(dt, entities);
 		});	
 		
-		entities.explosions = entities.explosions.filter(function(explosion){
+		entities.vanishings = entities.vanishings.filter(function(explosion){
 			return explosion.updatePosition(dt, entities);
 		});		
 		
@@ -69,7 +70,7 @@ var updateState = (function(){
 			var b = bubble;
 			entities.bullets.forEach(function(bullet){
 				if (!(bubble instanceof PointBubble) && bubble.collides(bullet)){
-					entities.explosions.push(new BubbleVanish(bubble.x, bubble.y, bubble.r, 'explode'));
+					entities.vanishings.push(new BubbleVanish(bubble.x, bubble.y, bubble.r, 'explode'));
 					sounds.explosionSound.play();
 					b = null;
 				}
@@ -90,7 +91,7 @@ var updateState = (function(){
 					sounds.pointSound.play();
 					gameState.points += bubble.getPoints();
 					type = 'point';
-					entities.explosions.push(new PointVanish(bubble.x, bubble.y, bubble.r, bubble.getPoints()));
+					entities.vanishings.push(new PointVanish(bubble.x, bubble.y, bubble.r, bubble.getPoints()));
 				} else {
 					sounds.bubbleSound.play();
 					energy.add(bubble.getEnergy() );
@@ -98,10 +99,10 @@ var updateState = (function(){
 						type = 'evil';
 					}
 				}
-				entities.explosions.push(new BubbleVanish(bubble.x, bubble.y, bubble.r, type));
+				entities.vanishings.push(new BubbleVanish(bubble.x, bubble.y, bubble.r, type));
 				
 				if (energy.isEmpty()){
-					entities.explosions.push(new PlayerVanish(entities.player.x, entities.player.y, 
+					entities.vanishings.push(new PlayerVanish(entities.player.x, entities.player.y, 
 					entities.player.w, entities.player.h));
 					entities.player = null;
 					sounds.dyingSound.play();
@@ -117,7 +118,7 @@ var updateState = (function(){
 		entities.bullets.filter(function(bullet){
 			return bullet.collides(entities.player);
 		}).forEach(function(bullet){
-			entities.explosions.push(new BulletVanish(bullet.x, bullet.y, app.bulletExplosionRadius));
+			entities.vanishings.push(new BulletVanish(bullet.x, bullet.y, app.bulletExplosionRadius));
 			energy.add(-1000);
 			sounds.bulletexplosionSound.play();
 		});
@@ -130,7 +131,7 @@ var updateState = (function(){
 			});
 				
 			if (blackHole.collides(entities.player)){
-				entities.explosions.push(new PlayerVanish(entities.player.x, entities.player.y, 
+				entities.vanishings.push(new PlayerVanish(entities.player.x, entities.player.y, 
 					entities.player.w, entities.player.h, blackHole));
 				entities.player = null;
 				sounds.blackholeSound.play();
@@ -138,7 +139,7 @@ var updateState = (function(){
 			}		
 		});
 		
-		if (keysDown['space']) _shootBullet();
+		if (keysDown['space'] && entities.player!=null) _shootBullet();
 
 		addNewBubble();
 		

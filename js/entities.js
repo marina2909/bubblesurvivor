@@ -2,6 +2,6 @@ function Entities(){
 	this.bubbles = [];
 	this.bullets = [];
 	this.blackHoles = [];
-	this.explosions = [];
+	this.vanishings = [];
 	this.player = new Player();	
 }

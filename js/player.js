@@ -24,7 +24,7 @@ Player.prototype.constructor = Player;
 Player.prototype.collides = function(a){
 	if (a instanceof  Bullet || a instanceof  Bubble){
 		var c0 = this.circles[0];
-		// return false if there is no collision between circumscribed circle
+		// return false if there is no collision between circumscribed circle and player
 		if (!((Math.pow(c0.x + this.x - a.x, 2) 
 		 + Math.pow(c0.y + this.y - a.y, 2)) < 
 		 Math.pow(c0.r + a.getRCollision(), 2))){
@@ -41,7 +41,7 @@ Player.prototype.collides = function(a){
 	return false;
 };
 
-Player.prototype.updatePosition = function(dt, entities, keysDown){
+Player.prototype.updatePosition = function(dt, keysDown){
 
 	var vx = 0;
 	var vy = 0;
@@ -59,7 +59,7 @@ Player.prototype.updatePosition = function(dt, entities, keysDown){
 		vy = app.playerSpeed;
 	}
 	
-	var newPos = this.getNewPosition(this._x, this._y, vx, vy, dt, 55);
+	var newPos = this.getNewPosition(this._x, this._y, vx, vy, dt, app.playerGravConst);
 	this._x = newPos.x;
 	this._y = newPos.y;
 	
@@ -76,16 +76,6 @@ Player.prototype.updatePosition = function(dt, entities, keysDown){
 
 Player.prototype.draw = function(){
 	this.sprite.draw();
-	/*for(i in this.circles){
-		var c = this.circles[i];
-		console.log(c.r);
-		app.ctx.beginPath();
-		app.ctx.arc(this._x+c.x, this._y+c.y, c.r, 0, 2 * Math.PI);
-		app.ctx.lineWidth = 1;
-		app.ctx.strokeStyle = "white";
-		app.ctx.stroke();
-		app.ctx.closePath();
-	}*/
 }
 
 Object.defineProperty(Player.prototype, 'w', {
