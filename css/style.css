@@ -1,7 +1,13 @@
 body{
 	background-color: black;
 	font: bold 36px 'Happy Sans', cursive;
-	text-shadow: 1px 1px 0px white;
+	text-shadow: 2px 2px white;
+}
+
+.title{
+	font: bold 50px  'Happy Sans', cursive;
+	color: #0C9C46;
+	margin-bottom: 60px;
 }
 
 #mainCanvas { 
@@ -28,16 +34,18 @@ body{
 .start{
 	position: absolute;
 	text-align: center;
-	top: calc(50% - 10px);
-	left: calc(50% - 105px);
+	top: calc(50% - 87px);
+	left: calc(50% - 189px);
+	width: 378px;
 }
 
 .finish{
 	position: absolute;
 	display: none;
 	text-align: center;
+	width: 300px;
 	top: calc(50% - 100px);
-	left: calc(50% - 110px);
+	left: calc(50% - 150px);
 }
 
 .finishTxt{

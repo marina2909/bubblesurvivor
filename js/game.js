@@ -3,7 +3,7 @@
 var animationDuration = {
 	bulletExplosion: 250,
 	bubbleExplosion: 700,
-	bubble: 300,
+	bubble: 400,
 	blackHole: 1000
 }
 
@@ -12,7 +12,8 @@ var gameState = {
 	bubbleSpeed: app.bubbleStartSpeed,
 	startTime: performance.now(),
 	totalBubbles: 0,
-	gameOver: false
+	gameOver: false,
+	gameStart: false
 }
 
 var sounds;
@@ -20,6 +21,8 @@ var energy;
 var entities;
 var keysDown;
 var loop;
+var sicon;
+
 
 var resetGame = function(){
 	
@@ -42,15 +45,15 @@ var resetGame = function(){
 	
 	
 	energy.reset();
-	console.log(energy.getV())
 	gameState.points = 0;
 	gameState.bubbleSpeed = app.bubbleStartSpeed;
 	gameState.startTime = performance.now();
 	gameState.totalBubbles = 0;
 	gameState.gameOver = false;
 	
-	requestAnimationFrame(loop);
 	entities = new Entities();
+	requestAnimationFrame(loop);
+	
 
 }
 
@@ -65,9 +68,12 @@ function load(){
 	app.ctx.font = "bold 25px Arial";
 	
 	keysDown = new KeysDown();
-		
+
+	setHomeScreenBubbles();
+	
 	document.getElementById('startbtn').addEventListener('click', function(){
 		document.getElementsByClassName('start')[0].style.display = "none";
+		gameState.gameStart = true;
 		resetGame(); 		
 	}, false);
 	
@@ -76,11 +82,11 @@ function load(){
 		resetGame();     
 	}, false);
 	
-	
 	document.getElementById('startbtn').focus();
 	
 	sounds = new Sounds();
 	energy = energy();
+	sicon = soundicon();
 }
 
 
@@ -93,3 +99,63 @@ function finishGame(){
 function getRandomInt(min, max) {
 	return min + Math.floor(Math.random() * (max - min + 1));
 };
+
+function setHomeScreenBubbles(){
+	var evilImg = loadImg('img/evilbubble.png');
+	var goodImg = loadImg('img/goodbubble.png');
+	var pointImg = loadImg('img/pointbubble.png');
+	
+	var r = 40;
+	var xEvil = 0;
+	var yEvil = 0;
+	var xGood = app.canvasWidth;
+	var yGood = app.canvasHeight;
+	var xPoint = 0;
+	var yPoint= app.canvasHeight/2;
+	
+	function _draw(){
+		app.ctx.drawImage(evilImg, xEvil, yEvil, 2*r, 2*r);
+		app.ctx.drawImage(goodImg, xGood, yGood, 2*r, 2*r);
+		app.ctx.drawImage(pointImg, xPoint, yPoint, r, r);
+	}
+	function _calculateCoordinates(dt){
+		var step = app.bubbleStartSpeed * dt;
+		xEvil += step;
+		yEvil += step;
+		xGood -= step;
+		yGood -= step;
+		xPoint +=step;
+		if (yEvil > app.canvasHeight){
+			yEvil = 0;
+		}
+		if (xEvil > app.canvasWidth){
+			xEvil = 0;
+		}
+		if (yGood< -60){
+			yGood = app.canvasHeight;
+		}
+		if (xGood < -60){
+			xGood= app.canvasWidth;
+		}
+		if (xPoint> app.canvasWidth){
+			xPoint= 0;
+		}
+	}
+	var loopStart = function() {
+		var lastFrameTime = performance.now();
+		return function(time){
+			app.ctx.clearRect(0, 0, app.canvasWidth, app.canvasHeight);
+			var dt = time - lastFrameTime;
+		
+			_calculateCoordinates(dt);
+			_draw();
+			
+			lastFrameTime = time;
+			if (!gameState.gameStart){
+				requestAnimationFrame(loopStart);
+			}
+		};
+	}();
+	requestAnimationFrame(loopStart);
+	
+}
