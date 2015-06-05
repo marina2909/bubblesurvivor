@@ -21,9 +21,11 @@ var draw = function(){
 			entities.player.draw();
 		}
 		
-		entities.explosions.forEach(function(explosion){
+		entities.vanishings.forEach(function(explosion){
 			explosion.draw();
 		});
+		
+		sicon.draw();
 	
 	}
 	
@@ -38,5 +40,6 @@ var draw = function(){
 		energy.draw();
 
 		app.ctx.fillText(gameState.points, 0.05*app.canvasWidth, 0.97*app.canvasHeight);
+		
 	}
 }();

@@ -18,6 +18,7 @@
 		<script src="js/bubble.js"></script>
 		<script src="js/addnewbubble.js"></script>
 		<script src="js/updatestate.js"></script>
+		<script src="js/soundicon.js"></script>
 		<script src="js/draw.js"></script>
 		<script src="js/game.js"></script>
 
@@ -25,15 +26,17 @@
 		<div class="main">	
 			<canvas id="mainCanvas"></canvas>
 			<div class="start">
+				<div class="title">Bubble Survivor</div>
 				<input type="button" id="startbtn" value="Start"/>
+			</div>
+			
+			<div class="finish">
+				<div class="finishTxt">You lose</div>
+				<div class="totalPoints"></div>
+				<input type="button" id="restartbtn" value="Start new game"/>
 			</div>
 		</div>
 		
-		<div class="finish">
-			<div class="finishTxt">You lose</div>
-			<div class="totalPoints"></div>
-			<input type="button" id="restartbtn" value="Start new game"/>
-		</div>
 		  <audio id='blackholeSound'>
 			<source src='sounds/blackhole.wav' type='audio/wav'>
 		</audio>

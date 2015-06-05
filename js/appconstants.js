@@ -19,7 +19,9 @@ var app = {
 	bubbleStartSpeed : 0.1,
 	backgroundImgSpeed: 0.02,
 	
-	soundOn: false,
+	soundOn: true,
 	volume: 0.25,
-	maxEnergy: 150000
+	maxEnergy: 150000,
+	
+	playerGravConst: 55
 };
