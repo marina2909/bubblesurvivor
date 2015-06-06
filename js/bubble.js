@@ -55,7 +55,7 @@ Bubble.prototype.updatePosition = function(dt, entities){
 Bubble.prototype.draw = function(){
 	app.ctx.save();
 	app.ctx.globalAlpha = this._opacity ;
-	app.ctx.drawImage(this.sprite, this._x - this._r, this._y - this._r, 2 * this._r, 2 * this._r);
+	app.ctx.drawImage(this.sprite(), this._x - this._r, this._y - this._r, 2 * this._r, 2 * this._r);
 	app.ctx.restore();
 }
 
@@ -69,7 +69,9 @@ function EvilBubble(){
 }
 EvilBubble.prototype = Object.create(Bubble.prototype);
 EvilBubble.prototype.constructor = EvilBubble;
-EvilBubble.prototype.sprite = loadImg('img/evilbubble.png');
+EvilBubble.prototype.sprite = function(){
+	return images.imgs['evilbubble'];
+}
 
 function GoodBubble(){
 	Bubble.call(this);
@@ -81,8 +83,9 @@ function GoodBubble(){
 }
 GoodBubble.prototype = Object.create(Bubble.prototype);
 GoodBubble.prototype.constructor = GoodBubble;
-GoodBubble.prototype.sprite = loadImg('img/goodbubble.png');
-
+GoodBubble.prototype.sprite = function(){
+	return images.imgs['goodbubble'];
+}
 
 function PointBubble(){
 	Bubble.call(this);
@@ -100,7 +103,9 @@ function PointBubble(){
 }
 PointBubble.prototype = Object.create(Bubble.prototype);
 PointBubble.prototype.constructor = PointBubble;
-PointBubble.prototype.sprite = loadImg('img/pointbubble.png');
+PointBubble.prototype.sprite = function(){
+	return images.imgs['pointbubble'];
+}
 PointBubble.prototype._generatePoints = function(){
 	var prob = [];
 	if (app.level == 0){
@@ -140,8 +145,9 @@ PointBubble.prototype.draw = function(){
 	app.ctx.save();
 	app.ctx.translate(this._x, this._y);
 	app.ctx.rotate(this._angle);
-	app.ctx.drawImage(this.sprite, - this._r, - this._r, 2 * this._r, 2 * this._r);
+	app.ctx.drawImage(this.sprite(), - this._r, - this._r, 2 * this._r, 2 * this._r);
 	app.ctx.drawImage(PointBubble.prototype.spriteLights[this._pointNumber - 1], - this._rLight, - this._rLight, 2 * this._rLight, 2 * this._rLight);
+	//app.ctx.drawImage(images.imgs['light'+(this._pointNumber)], - this._rLight, - this._rLight, 2 * this._rLight, 2 * this._rLight);
 	app.ctx.restore();
 
 }
@@ -160,7 +166,11 @@ function BlackHole(){
 }
 BlackHole.prototype = Object.create(Bubble.prototype);
 BlackHole.prototype.constructor = BlackHole;
-BlackHole.prototype.sprite = loadImg('img/blackhole.png');
+//BlackHole.prototype.sprite = loadImg('img/blackhole.png');
+BlackHole.prototype.sprite = function(){
+	return images.imgs['blackhole'];
+}
+
 
 BlackHole.prototype.updatePosition = function(dt, entities){
 	Bubble.prototype.updatePosition.apply(this, arguments);
@@ -170,7 +180,7 @@ BlackHole.prototype.draw = function(){
 	app.ctx.save();
 	app.ctx.translate(this._x, this._y);
 	app.ctx.rotate(this._angle);
-	app.ctx.drawImage(this.sprite, - this._r, - this._r, 2 * this._r, 2 * this._r);
+	app.ctx.drawImage(this.sprite(), - this._r, - this._r, 2 * this._r, 2 * this._r);
 	app.ctx.restore();
 }
 BlackHole.prototype.getRCollision = function(){

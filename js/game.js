@@ -22,6 +22,7 @@ var entities;
 var keysDown;
 var loop;
 var sicon;
+var images;
 
 
 var resetGame = function(){
@@ -51,10 +52,13 @@ var resetGame = function(){
 	gameState.totalBubbles = 0;
 	gameState.gameOver = false;
 	
-	entities = new Entities();
-	requestAnimationFrame(loop);
-	
 
+	images = gameImages();
+	images.load(function(){
+		requestAnimationFrame(loop);
+	});
+	entities = new Entities();
+	
 }
 
 
@@ -70,6 +74,9 @@ function load(){
 	keysDown = new KeysDown();
 
 	setHomeScreenBubbles();
+	sounds = new Sounds();
+	energy = energy();
+	sicon = soundicon();
 	
 	document.getElementById('startbtn').addEventListener('click', function(){
 		document.getElementsByClassName('start')[0].style.display = "none";
@@ -84,9 +91,7 @@ function load(){
 	
 	document.getElementById('startbtn').focus();
 	
-	sounds = new Sounds();
-	energy = energy();
-	sicon = soundicon();
+
 }
 
 

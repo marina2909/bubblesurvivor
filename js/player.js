@@ -16,7 +16,7 @@ function Player(){
 					new Circle(h/14, w*23/25 - w/2, h*1/2 - h/2), 
 					new Circle(h/20, w*48/50 - w/2, h*1/2 - h/2)
 					];
-	this.sprite = new Sprite(loadImg('img/player.png'), this._w, this._h, this._w, this._h, 15, 'vertical', [0, 1, 2, 3]);
+	this.sprite = new Sprite(images.imgs['player'], this._w, this._h, this._w, this._h, 15, 'vertical', [0, 1, 2, 3]);
 }
 
 Player.prototype = Object.create(Entity.prototype);  
