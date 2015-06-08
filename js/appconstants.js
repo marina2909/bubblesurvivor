@@ -8,7 +8,7 @@ var app = {
 	bulletsDistance: 300,
 	bubbleTypes: ['good', 'evil', 'point'],
 	bubbleProbabilities: [0.7, 0.2, 0.1],
-	blackHoleOccurency: 25,
+	blackHoleOccurency: 10000,
 	bulletExplosionRadius: 10,
 	distanceFromBlackHole: 70,
 	
@@ -16,7 +16,7 @@ var app = {
 	levelChangeStep: 50000,
 	playerSpeed: 0.3, 
 	bulletSpeed: 0.3, 
-	bubbleStartSpeed : 0.4,
+	bubbleStartSpeed : 0.5,
 	backgroundImgSpeed: 0.02,
 	
 	soundOn: true,

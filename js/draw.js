@@ -26,15 +26,17 @@ var draw = function(){
 		});
 		
 		sicon.draw();
+		
+		app.ctxMain.drawImage(app.canvas,0,0);    	
 	
 	}
 	
 	return function(totalTime){
 	
 
-		var x = (totalTime*app.backgroundImgSpeed )% 520;
-		app.ctx.drawImage(background,- x,-5);
-		app.ctx.drawImage(background, app.canvasWidth - x,-5);
+		var x = (totalTime*app.backgroundImgSpeed ) % app.canvasWidth;
+		app.ctx.drawImage(background,- x,0);
+		app.ctx.drawImage(background, app.canvasWidth - x,0);
      
 		_drawEntities();
 		energy.draw();

@@ -63,13 +63,19 @@ var resetGame = function(){
 
 
 function load(){  
-	
-	app.canvas = document.getElementById("mainCanvas");
+
+	app.canvas  = document.createElement('canvas');
 	app.canvas.width = app.canvasWidth;
 	app.canvas.height = app.canvasHeight;
 	app.ctx = app.canvas.getContext('2d');
-	app.ctx.fillStyle = "white";
-	app.ctx.font = "bold 25px Arial";
+	
+	app.canvasMain= document.getElementById("mainCanvas");
+	app.canvasMain.width = app.canvasWidth;
+	app.canvasMain.height = app.canvasHeight;
+	app.ctxMain = app.canvasMain.getContext('2d');
+	app.ctxMain.fillStyle = "white";
+	app.ctxMain.font = "bold 25px Arial";
+	
 	
 	keysDown = new KeysDown();
 
