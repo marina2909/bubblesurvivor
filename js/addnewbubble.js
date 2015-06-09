@@ -3,23 +3,17 @@ var addNewBubble = (function(){
 	var _newBubble;
 	
 	function _generateBubble(){
-		var sum = 0;
+		var sumMid = app.bubbleProbabilities[0] + app.bubbleProbabilities[1];
+		var sumLast = sumMid +app.bubbleProbabilities[2];
 		var rand = Math.random();
-		var prev = 0;
-		for (var i=0; i<app.bubbleTypes.length; i++){
-			sum += app.bubbleProbabilities[i];
-			if (rand >=prev && rand <= sum){
-				var bubbleType = app.bubbleTypes[i];
-				if (bubbleType == 'good'){
-					return new GoodBubble();
-				} else if (bubbleType == 'evil'){
-					return new EvilBubble();
-				} else if (bubbleType == 'point'){
-					return new PointBubble();
-				} 
-			}
-			prev = sum;
+		if  (rand >= 0 && rand < app.bubbleProbabilities[0]){
+			return new GoodBubble();
+		} else if (rand >= app.bubbleProbabilities[0] && rand < sumMid){
+			return new EvilBubble();
+		} else if (rand >= sumMid  && rand < sumLast) {
+			return new PointBubble();
 		}
+		return null;
 	};
 	
 	function _isCollision(){
@@ -59,7 +53,7 @@ var addNewBubble = (function(){
 			}
 		}
 		
-		if (!_isCollision()){
+		if (_newBubble != null && !_isCollision()){
 			if (_newBubble instanceof BlackHole){
 				entities.blackHoles.push(_newBubble);
 			} else {
