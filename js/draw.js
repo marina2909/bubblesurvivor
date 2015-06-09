@@ -27,8 +27,6 @@ var draw = function(){
 		
 		sicon.draw();
 		
-		app.ctxMain.drawImage(app.canvas,0,0);    	
-	
 	}
 	
 	return function(totalTime){
@@ -40,8 +38,10 @@ var draw = function(){
      
 		_drawEntities();
 		energy.draw();
-
+		
 		app.ctx.fillText(gameState.points, 0.05*app.canvasWidth, 0.97*app.canvasHeight);
+
+		app.ctxMain.drawImage(app.canvas,0,0); 
 		
 	}
 }();
