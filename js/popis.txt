@@ -1,8 +1,0 @@
-1. when item goes off the borders make it not dissapear immediately+
-2. black hole eats bullet+
-3. more black holes gravitation
-4. bug player na rubu+
-5. rjesit se globala i staviy ih u funkcije+
-6. collision detection popravit
-7. ne dotaknem crnu supu a detektira koliziju+
-8.

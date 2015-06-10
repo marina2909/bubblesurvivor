@@ -61,8 +61,9 @@ var updateState = (function(){
 		
 		entities.vanishings = entities.vanishings.filter(function(explosion){
 			return explosion.updatePosition(dt, entities);
-		});		
+		});	
 		
+		energy.update(dt);
 		
 		// collision between bubbles and bullets
 		entities.bubbles = entities.bubbles.map(function(bubble){

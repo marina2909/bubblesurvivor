@@ -7,8 +7,8 @@ function soundicon(){
 	var r = 13;	
 	
 	document.body.onclick= function(e) { 
-		var mouseX= e.pageX - app.canvas.offsetLeft;
-		var mouseY = e.pageY - app.canvas.offsetTop;
+		var mouseX= e.pageX - app.canvasMain.offsetLeft;
+		var mouseY = e.pageY - app.canvasMain.offsetTop;
 		if ((x - r <  mouseX)  &&  (mouseX < x + r) &&  (y - r <  mouseY) && (mouseY < y + r) ){
 			app.soundOn = !app.soundOn;
 			_img = app.soundOn ? _imgOn : _imgOff;
