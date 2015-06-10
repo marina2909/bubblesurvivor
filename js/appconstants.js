@@ -1,8 +1,8 @@
 var app = {
 	canvasWidth: 820,
-	canvasHeight: 520,
+	canvasHeight: 519,
 	bulletRadius: 4,
-	energyWidth: 22,
+	energyWidth: 24,
 	
 	bubbleDistance: 7,
 	bulletsDistance: 300,
@@ -10,15 +10,17 @@ var app = {
 	blackHoleOccurency: 10000,
 	bulletExplosionRadius: 10,
 	distanceFromBlackHole: 70,
+	pointsX: 35,
+	pointsY: 500,
 	
 	bubbleAccStep: 0.0000001,
 	levelChangeStep: 50000,
 	playerSpeed: 0.3, 
 	bulletSpeed: 0.3, 
 	bubbleStartSpeed : 0.5,
-	backgroundImgSpeed: 0.02,
+	backgroundImgSpeed: 0.1,
 	
-	soundOn: false,
+	soundOn: true,
 	volume: 0.25,
 	maxEnergy: 150000,
 	

@@ -31,8 +31,6 @@ var resetGame = function(){
 		var lastFrameTime = performance.now();
 		return function(time){
 			var dt = time - lastFrameTime;
-			energy.add(-dt);
-			
 			updateState(dt, keysDown.getKeys());
 			draw(time - gameState.startTime);
 			lastFrameTime = time;
@@ -68,14 +66,13 @@ function load(){
 	app.canvas.width = app.canvasWidth;
 	app.canvas.height = app.canvasHeight;
 	app.ctx = app.canvas.getContext('2d');
+	app.ctx.font="bold 25px Arial";
+	app.ctx.fillStyle = "white";
 	
 	app.canvasMain= document.getElementById("mainCanvas");
 	app.canvasMain.width = app.canvasWidth;
 	app.canvasMain.height = app.canvasHeight;
 	app.ctxMain = app.canvasMain.getContext('2d');
-	app.ctxMain.fillStyle = "white";
-	app.ctxMain.font = "bold 25px Arial";
-	
 	
 	keysDown = new KeysDown();
 
