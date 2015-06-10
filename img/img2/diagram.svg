@@ -13,7 +13,7 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="diagram.svg">
   <defs
      id="defs4" />
@@ -24,14 +24,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="375"
-     inkscape:cy="520"
+     inkscape:zoom="5.6"
+     inkscape:cx="-1.9930701"
+     inkscape:cy="13.832202"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="706"
+     inkscape:window-width="1280"
+     inkscape:window-height="662"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,32 +52,32 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4218"
+       width="24"
+       height="519"
+       x="14"
+       y="533.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect2985"
        width="208.57143"
        height="82.85714"
-       x="168.57143"
-       y="309.50504"
+       x="548.38879"
+       y="307.48471"
        inkscape:export-filename="D:\projects\bubblesurviver\img\diagramGreen.png"
        inkscape:export-xdpi="24"
        inkscape:export-ydpi="24" />
     <rect
-       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect2985-1"
-       width="208.57143"
-       height="82.85714"
-       x="170"
-       y="633.79077"
-       inkscape:export-filename="D:\projects\bubblesurviver\img\diagramRed.png"
-       inkscape:export-xdpi="24"
-       inkscape:export-ydpi="24" />
-    <rect
-       style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect2985-4"
        width="208.57143"
        height="82.85714"
-       x="470"
-       y="422.36218"
+       x="548.79187"
+       y="436.50433"
        inkscape:export-filename="D:\projects\bubblesurviver\img\diagram.png"
        inkscape:export-xdpi="24"
        inkscape:export-ydpi="24" />
@@ -86,10 +86,1060 @@
        id="rect3813"
        width="20"
        height="394.28571"
-       x="517.14288"
-       y="632.36218"
+       x="711.09216"
+       y="556.60077"
        inkscape:export-filename="D:\projects\bubblesurviver\img\separator.png"
        inkscape:export-xdpi="24"
        inkscape:export-ydpi="24" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3"
+       width="22"
+       height="9"
+       x="14"
+       y="1043.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8"
+       width="22"
+       height="9"
+       x="13.999999"
+       y="1033.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7"
+       width="22"
+       height="9"
+       x="14"
+       y="1023.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3"
+       width="22"
+       height="9"
+       x="14"
+       y="1013.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2"
+       width="22"
+       height="9"
+       x="14"
+       y="1003.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6"
+       width="22"
+       height="9"
+       x="14"
+       y="993.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6"
+       width="22"
+       height="9"
+       x="14"
+       y="983.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1"
+       width="22"
+       height="9"
+       x="14"
+       y="973.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-4"
+       width="22"
+       height="9"
+       x="14.000002"
+       y="963.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-0"
+       width="22"
+       height="9"
+       x="14"
+       y="953.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-7"
+       width="22"
+       height="9"
+       x="14.000002"
+       y="943.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-6"
+       width="22"
+       height="9"
+       x="14.000002"
+       y="933.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-6"
+       width="22"
+       height="9"
+       x="14.000002"
+       y="923.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-8"
+       width="22"
+       height="9"
+       x="14.000002"
+       y="913.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-3"
+       width="22"
+       height="9"
+       x="14.000002"
+       y="903.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-4"
+       width="22"
+       height="9"
+       x="14.000002"
+       y="893.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-75"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="883.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-02"
+       width="22"
+       height="9"
+       x="14"
+       y="873.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-63"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="863.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-0"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="853.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-8"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="843.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-0"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="833.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-2"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="823.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-7"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="813.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-4-0"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="803.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-0-9"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="793.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-7-7"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="783.36212"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-6-3"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="773.36212"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-6-4"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="763.36212"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-8-5"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="753.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-3-4"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="743.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-4-5"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="733.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-3"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="723.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-32"
+       width="22"
+       height="9"
+       x="14"
+       y="713.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-1"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="703.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-62"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="693.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-1"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="683.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-6"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="673.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-31"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="663.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-40"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="653.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-4-8"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="643.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-0-0"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="633.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-7-5"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="623.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-6-8"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="613.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-6-0"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="603.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-8-2"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="593.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-3-46"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="583.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-4-54"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="573.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-75-9"
+       width="22"
+       height="9"
+       x="14.000008"
+       y="563.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-02-8"
+       width="22"
+       height="9"
+       x="14.000004"
+       y="553.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-63-2"
+       width="22"
+       height="9"
+       x="14.000008"
+       y="543.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-0-7"
+       width="22"
+       height="9"
+       x="14.000008"
+       y="533.36206"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyColor.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#1d1d1d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4218-6"
+       width="24"
+       height="519"
+       x="60"
+       y="533.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-0"
+       width="22"
+       height="9"
+       x="60"
+       y="1043.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-327"
+       width="22"
+       height="9"
+       x="60"
+       y="1033.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-14"
+       width="22"
+       height="9"
+       x="60"
+       y="1023.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-66"
+       width="22"
+       height="9"
+       x="60"
+       y="1013.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-13"
+       width="22"
+       height="9"
+       x="60"
+       y="1003.3622"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-1"
+       width="22"
+       height="9"
+       x="60"
+       y="993.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-1"
+       width="22"
+       height="9"
+       x="60"
+       y="983.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-9"
+       width="22"
+       height="9"
+       x="60"
+       y="973.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-4-3"
+       width="22"
+       height="9"
+       x="60"
+       y="963.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-0-3"
+       width="22"
+       height="9"
+       x="60"
+       y="953.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-7-75"
+       width="22"
+       height="9"
+       x="60"
+       y="943.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-6-7"
+       width="22"
+       height="9"
+       x="60"
+       y="933.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-6-9"
+       width="22"
+       height="9"
+       x="60"
+       y="923.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-8-1"
+       width="22"
+       height="9"
+       x="60"
+       y="913.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-3-2"
+       width="22"
+       height="9"
+       x="60"
+       y="903.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-4-4"
+       width="22"
+       height="9"
+       x="60"
+       y="893.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-75-0"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="883.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-02-1"
+       width="22"
+       height="9"
+       x="60"
+       y="873.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-63-4"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="863.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-0-5"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="853.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-8-2"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="843.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-0-0"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="833.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-2-3"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="823.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-7-0"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="813.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-4-0-6"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="803.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-0-9-0"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="793.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-7-7-1"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="783.36212"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-6-3-1"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="773.36212"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-6-4-8"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="763.36212"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-8-5-4"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="753.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-3-4-5"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="743.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-4-5-8"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="733.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-3-6"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="723.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-32-2"
+       width="22"
+       height="9"
+       x="60"
+       y="713.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-1-7"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="703.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-62-6"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="693.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-1-6"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="683.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-6-6"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="673.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-31-8"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="663.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-40-1"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="653.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-4-8-0"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="643.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-0-0-4"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="633.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-7-5-0"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="623.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-6-8-7"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="613.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-2-6-0-0"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="603.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-6-8-2-3"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="593.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-6-3-46-1"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="583.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-1-4-54-3"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="573.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-75-9-1"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="563.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-02-8-1"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="553.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-7-63-2-2"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="543.36218"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2985-3-8-3-0-7-7"
+       width="22"
+       height="9"
+       x="60.000031"
+       y="533.36206"
+       inkscape:export-filename="C:\projects\bubblesurviver\img\energyBlank.png"
+       inkscape:export-xdpi="89.999977"
+       inkscape:export-ydpi="89.999977" />
   </g>
 </svg>
