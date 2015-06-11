@@ -17,7 +17,7 @@ var app = {
 	levelChangeStep: 50000,
 	playerSpeed: 0.3, 
 	bulletSpeed: 0.3, 
-	bubbleStartSpeed : 0.5,
+	bubbleStartSpeed : 0.3,
 	backgroundImgSpeed: 0.1,
 	
 	soundOn: true,

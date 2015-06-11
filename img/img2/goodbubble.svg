@@ -14,7 +14,7 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="goodbubble.svg">
   <defs
      id="defs4">
@@ -48,13 +48,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="302.29633"
+     inkscape:cx="88.724901"
      inkscape:cy="592.75994"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="706"
+     inkscape:window-width="1280"
+     inkscape:window-height="662"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -66,7 +66,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -84,8 +84,8 @@
        sodipodi:ry="295.71429"
        d="m 400.00001,276.64789 a 295.71429,295.71429 0 1 1 -591.42859,0 295.71429,295.71429 0 1 1 591.42859,0 z"
        transform="translate(270,227.14285)"
-       inkscape:export-filename="D:\projects\bubblesurviver\img\goodbubble.png"
-       inkscape:export-xdpi="9.9637566"
-       inkscape:export-ydpi="9.9637566" />
+       inkscape:export-filename="C:\projects\bubblesurviver\img\goodbubble3.png"
+       inkscape:export-xdpi="12.47826"
+       inkscape:export-ydpi="12.47826" />
   </g>
 </svg>

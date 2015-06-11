@@ -14,8 +14,11 @@
    height="1052.3622047"
    id="svg5348"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="evilbubble.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="evilbubble.svg"
+   inkscape:export-filename="C:\projects\bubblesurviver\img\evilbubble3.png"
+   inkscape:export-xdpi="12.596253"
+   inkscape:export-ydpi="12.596253">
   <defs
      id="defs5350">
     <linearGradient
@@ -47,14 +50,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="155.90582"
-     inkscape:cy="526.18109"
+     inkscape:zoom="0.7"
+     inkscape:cx="255.08994"
+     inkscape:cy="555.61938"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="706"
+     inkscape:window-width="1280"
+     inkscape:window-height="662"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -66,7 +69,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -74,18 +77,18 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       sodipodi:type="arc"
+    <circle
        style="fill:url(#radialGradient5908);fill-opacity:1.0;stroke:none"
        id="path5360"
-       sodipodi:cx="183.84776"
-       sodipodi:cy="266.4635"
-       sodipodi:rx="292.94424"
-       sodipodi:ry="292.94424"
-       d="m 476.79201,266.4635 a 292.94424,292.94424 0 1 1 -585.88849,0 292.94424,292.94424 0 1 1 585.88849,0 z"
-       transform="translate(214.15234,246.47722)"
        inkscape:export-filename="D:\projects\bubblesurviver\img\evilbubble.png"
        inkscape:export-xdpi="9.9637566"
-       inkscape:export-ydpi="9.9637566" />
+       inkscape:export-ydpi="9.9637566"
+       transform="translate(214.15234,246.47722)"
+       d="m 476.79201,266.4635 a 292.94424,292.94424 0 1 1 -585.88849,0 292.94424,292.94424 0 1 1 585.88849,0 z"
+       sodipodi:type="arc"
+       sodipodi:ry="292.94424"
+       sodipodi:rx="292.94424"
+       sodipodi:cy="266.4635"
+       sodipodi:cx="183.84776" />
   </g>
 </svg>

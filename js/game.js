@@ -24,7 +24,6 @@ var loop;
 var sicon;
 var images;
 
-
 var resetGame = function(){
 	
 	loop = function() {

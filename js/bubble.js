@@ -55,36 +55,38 @@ Bubble.prototype.updatePosition = function(dt, entities){
 Bubble.prototype.draw = function(){
 	app.ctx.save();
 	app.ctx.globalAlpha = this._opacity ;
-	app.ctx.drawImage(this.sprite(), this._x - this._r, this._y - this._r, 2 * this._r, 2 * this._r);
+	app.ctx.drawImage(this.sprite(), this._x - this._r, this._y - this._r);
 	app.ctx.restore();
 }
 
 function EvilBubble(){
 	Bubble.call(this);
-	var evilAirMin = 5;
-	var evilAirMax = 15;
-	this._energy = -getRandomInt(evilAirMin, evilAirMax);
-	this._r =  20 + 20 * (-this._energy - evilAirMin) / (evilAirMax - evilAirMin);
+	this._idx = Math.floor(Math.random() * 4);
+	this._energy = this.energyArr[this._idx];
+	this._r =  this.rArr[this._idx];
 	this._energy*=1000;
 }
 EvilBubble.prototype = Object.create(Bubble.prototype);
 EvilBubble.prototype.constructor = EvilBubble;
+EvilBubble.prototype.rArr = [20, 27, 34, 41];
+EvilBubble.prototype.energyArr = [-4, -8, -12, -16];
 EvilBubble.prototype.sprite = function(){
-	return images.imgs['evilbubble'];
+	return images.evilbubbles[this._idx];
 }
 
 function GoodBubble(){
 	Bubble.call(this);
-	var goodAirMin = 5;
-	var goodAirMax = 15;
-	this._energy = getRandomInt(goodAirMin, goodAirMax);
-	this._r = 20 + 20 * (this._energy - goodAirMin) / (goodAirMax - goodAirMin); 
+	this._idx = Math.floor(Math.random() * 4);
+	this._energy = this.energyArr[this._idx];
+	this._r =  this.rArr[this._idx];
 	this._energy*=1000;
 }
 GoodBubble.prototype = Object.create(Bubble.prototype);
 GoodBubble.prototype.constructor = GoodBubble;
+GoodBubble.prototype.rArr = [20, 27, 34, 41];
+GoodBubble.prototype.energyArr = [4, 8, 12, 16];
 GoodBubble.prototype.sprite = function(){
-	return images.imgs['goodbubble'];
+	return images.goodbubbles[this._idx];
 }
 
 function PointBubble(){
