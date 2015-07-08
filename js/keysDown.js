@@ -1,4 +1,4 @@
-function KeysDown(){	
+function keysDown(){	
 	var kDown = {};
 	var keys = {
 		37: 'left',
