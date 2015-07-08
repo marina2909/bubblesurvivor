@@ -80,12 +80,10 @@ Entity.prototype.getNewPosition = function(x1, y1, vx1, vy1, dt, gravConst){
 		
 	var vx = vx1 + gravvX;
 	var vy = vy1 + gravvY; 	
-	var x2 = x1 + vx*dt;  
-	var y2 = y1 + vy*dt;
+	var x2 = Math.round(x1 + vx*dt);  
+	var y2 = Math.round(y1 + vy*dt);
 	
 	return {
-		vx: vx,
-		vy: vy,
 		x: x2,
 		y: y2
 	}

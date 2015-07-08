@@ -26,8 +26,6 @@ var draw = function(){
 			explosion.draw();
 		});
 		
-		sicon.draw();
-		
 	}
 	
 	return function(totalTime){

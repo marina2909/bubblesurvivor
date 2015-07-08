@@ -4,7 +4,7 @@ var addNewBubble = (function(){
 	
 	function _generateBubble(){
 		var sumMid = app.bubbleProbabilities[0] + app.bubbleProbabilities[1];
-		var sumLast = sumMid +app.bubbleProbabilities[2];
+		var sumLast = sumMid + app.bubbleProbabilities[2];
 		var rand = Math.random();
 		if  (rand >= 0 && rand < app.bubbleProbabilities[0]){
 			return new GoodBubble();

@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css"></link>
 		<script src="js/loadimg.js"></script>
+		<script src="js/slider.js"></script>
 		<script src="js/images.js"></script>
 		<script src="js/appconstants.js"></script>
 		<script src="js/soundpool.js"></script>
@@ -37,15 +38,18 @@
 				<div class="totalPoints"></div>
 				<input type="button" id="restartbtn" value="Start new game"/>
 			</div>
-		</div>
 		
-		  <audio id='blackholeSound'>
+		</div>
+
+		<div class="slider1"><span class="slipper"></span></div>
+		
+		 <audio id='blackholeSound'>
 			<source src='sounds/blackhole.wav' type='audio/wav'>
 		</audio>
 		  <audio id='explosionSound'>
 			<source src='sounds/explosion.wav' type='audio/wav'>
 		</audio>
-		 <audio id='bubbleSound'>
+		<audio id='bubbleSound'>
 			<source src='sounds/bubble.wav' type='audio/wav'>
 		</audio>
 		<audio id='pointSound'>
@@ -54,5 +58,7 @@
 		<audio id='shootSound'>
 			<source src='sounds/shoot.wav' type='audio/wav'>
 		</audio>
+		
+		<input class="slider" type="range"   orient="vertical" min="0" max="1" step="0.05" value="0.5"/>
 	</body>
 </html>

@@ -2,6 +2,12 @@ body{
 	background-color: black;
 	font: bold 36px 'Happy Sans', cursive;
 	text-shadow: 2px 2px white;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .title{
@@ -18,7 +24,7 @@ body{
     margin-right: auto;
     display: block;
 	position: relative;
-	top: calc(50% - 250px);
+	top: calc(50% - 260px);
 }
 .main{
 	height: 90vh;
@@ -70,12 +76,25 @@ body{
 	margin-bottom: 10px;
 }
 
+.slider[orient=vertical]{
+	position: absolute;
+	display: none;
+	border: 1px solid green;
+	background-color: white;
+	cursor: pointer;
+	writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
+}
+
 
 input[type = "button"] {
-	padding: 14px;
+	padding: 12px;
 	width: 217px;
 	background-color:#33bdef;
-	border-radius:6px;
+	border-radius: 6px; 
 	border:0px solid #057fd0;
 	cursor:pointer;
 	color:#ffffff;
@@ -86,3 +105,8 @@ input[type = "button"] {
  input[type = "button"]:hover {
 	background-color:#019ad2;
 }
+
+ input[type = "button"]:focus {
+	outline:none;
+}
+

@@ -7,7 +7,6 @@ function Bullet(x, y){
 	this._y = y;
 	this._r = app.bulletRadius;
 
-	
 	this.isInside = function(){
 		return this._x > 0 && this._x < app.canvasWidth &&
 			this._y > 0 && this._y < app.canvasHeight;
@@ -16,11 +15,8 @@ function Bullet(x, y){
 
 Bullet.prototype = Object.create(Entity.prototype);
 Bullet.prototype.constructor = Bullet;
-Bullet.prototype.sprite = loadImg('img/bullet.png');
 Bullet.prototype.updatePosition = function(dt, entities){
-	var newPos = this.getNewPosition(this._x, this._y, this._vx, this._vy, dt, 10);
-	this._vx = newPos.vx;
-	this._vy = newPos.vy;
+	var newPos = this.getNewPosition(this._x, this._y, this._vx, this._vy, dt, app.bulletGravConstant);
 	this._x = newPos.x;
 	this._y = newPos.y;
 }
@@ -34,6 +30,6 @@ Bullet.prototype.collides = function(a){
 }
 
 Bullet.prototype.draw = function(){
-	app.ctx.drawImage(this.sprite, this._x - this._r, this._y - this._r, 2 * this._r, 2 * this._r);
+	app.ctx.drawImage(images.imgs['bullet'], this._x - this._r, this._y - this._r, 2 * this._r, 2 * this._r);
 }
 

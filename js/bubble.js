@@ -9,7 +9,8 @@ Bubble.prototype.generateStartYPosition = function(){
 
 		var _nextY = 0;
 		var _currentY = 0;	
-		var bubblePositions = [app.canvasHeight/9, 2*app.canvasHeight/9, 3*app.canvasHeight/9, 4*app.canvasHeight/9, 5*app.canvasHeight/9, 6*app.canvasHeight/9, 7*app.canvasHeight/9, 8*app.canvasHeight/9];
+		var bubblePositions = [Math.round(app.canvasHeight/9), Math.round(2*app.canvasHeight/9), Math.round(3*app.canvasHeight/9), Math.round(4*app.canvasHeight/9), Math.round(5*app.canvasHeight/9), Math.round(6*app.canvasHeight/9), Math.round(7*app.canvasHeight/9), Math.round(8*app.canvasHeight/9)];
+
 		
 		return function(){
 			if (!app.isBubbleAdded){
@@ -135,7 +136,6 @@ PointBubble.prototype._generatePoints = function(){
 		prev = sum;
 	}
  }
-PointBubble.prototype.spriteLights = [loadImg('img/light1.png'), loadImg('img/light2.png'), loadImg('img/light3.png')];
 PointBubble.prototype.updatePosition = function(dt, entities){
 	Bubble.prototype.updatePosition.apply(this, arguments);
 	this._fAnimation = Math.sin(0.005 * (performance.now()));
@@ -148,8 +148,7 @@ PointBubble.prototype.draw = function(){
 	app.ctx.translate(this._x, this._y);
 	app.ctx.rotate(this._angle);
 	app.ctx.drawImage(this.sprite(), - this._r, - this._r, 2 * this._r, 2 * this._r);
-	app.ctx.drawImage(PointBubble.prototype.spriteLights[this._pointNumber - 1], - this._rLight, - this._rLight, 2 * this._rLight, 2 * this._rLight);
-	//app.ctx.drawImage(images.imgs['light'+(this._pointNumber)], - this._rLight, - this._rLight, 2 * this._rLight, 2 * this._rLight);
+	app.ctx.drawImage(images.imgs['light'+(this._pointNumber)], - this._rLight, - this._rLight, 2 * this._rLight, 2 * this._rLight);
 	app.ctx.restore();
 
 }
@@ -168,7 +167,6 @@ function BlackHole(){
 }
 BlackHole.prototype = Object.create(Bubble.prototype);
 BlackHole.prototype.constructor = BlackHole;
-//BlackHole.prototype.sprite = loadImg('img/blackhole.png');
 BlackHole.prototype.sprite = function(){
 	return images.imgs['blackhole'];
 }

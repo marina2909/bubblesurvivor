@@ -15,7 +15,7 @@ Vanish.prototype.updatePosition = function(dt){
 	this._x = this.getNewPosition(this._x, this._y, -this._speed , 0, dt, 0).x;
 	var t = (performance.now() - this._startTime) / this._animationDuration;
 	if (t < 1){
-		this._r = this._rStart + (this._rEnd - this._rStart) * this._fAnimation(t);
+		this._r = Math.round(this._rStart + (this._rEnd - this._rStart) * this._fAnimation(t));
 		this._opacity = 1 - t; 
 		if (this._r < 0) this._r = 0; 
 		return true;

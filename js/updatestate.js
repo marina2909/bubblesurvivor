@@ -40,7 +40,7 @@ var updateState = (function(){
 	return function(dt, keysDown){
 	
 		// change the level and speed
-		//gameState.bubbleSpeed += app.bubbleAccStep*dt;
+		gameState.bubbleSpeed += app.bubbleAccStep*dt;
 		app.level = Math.floor((performance.now() - gameState.startTime)/app.levelChangeStep);
 		
 		if (entities.player != null){

@@ -21,10 +21,12 @@ var energy;
 var entities;
 var keysDown;
 var loop;
-var sicon;
+var soundIcon;
 var images;
 
 var resetGame = function(){
+	
+	sounds.introSound.stop();
 	
 	loop = function() {
 		var lastFrameTime = performance.now();
@@ -41,15 +43,10 @@ var resetGame = function(){
 		};
 	}();
 	
-	
 	energy.reset();
-	gameState.points = 0;
-	gameState.bubbleSpeed = app.bubbleStartSpeed;
-	gameState.startTime = performance.now();
-	gameState.totalBubbles = 0;
-	gameState.gameOver = false;
+	resetGameStateVariables();
 	
-
+	// make sure you start the game after all images are loaded
 	images = gameImages();
 	images.load(function(){
 		requestAnimationFrame(loop);
@@ -61,6 +58,7 @@ var resetGame = function(){
 
 function load(){  
 
+	// create offset canvas
 	app.canvas  = document.createElement('canvas');
 	app.canvas.width = app.canvasWidth;
 	app.canvas.height = app.canvasHeight;
@@ -68,17 +66,24 @@ function load(){
 	app.ctx.font="bold 25px Arial";
 	app.ctx.fillStyle = "white";
 	
+	// create main canvas
 	app.canvasMain= document.getElementById("mainCanvas");
 	app.canvasMain.width = app.canvasWidth;
 	app.canvasMain.height = app.canvasHeight;
 	app.ctxMain = app.canvasMain.getContext('2d');
 	
-	keysDown = new KeysDown();
-
-	setHomeScreenBubbles();
+	keysDown = new keysDown();
 	sounds = new Sounds();
 	energy = energy();
-	sicon = soundicon();
+	
+	var soundSlider = slider();
+	soundIcon = soundicon();
+	soundIcon.setActionOnClick(function(){
+		soundSlider.show(soundIcon.getCanvasX()  + app.canvasMain.offsetLeft, soundIcon.getCanvasY() + app.canvasMain.offsetTop);
+	});
+	
+	setHomeScreenBubblePlay();
+	sounds.introSound.play();
 	
 	document.getElementById('startbtn').addEventListener('click', function(){
 		document.getElementsByClassName('start')[0].style.display = "none";
@@ -91,9 +96,14 @@ function load(){
 		resetGame();     
 	}, false);
 	
+	document.addEventListener('click', function(e){
+		if (!soundSlider.isClicked(e) && !soundIcon.isClicked(e)){
+			soundSlider.hide();
+		}
+	});
+	
 	document.getElementById('startbtn').focus();
 	
-
 }
 
 
@@ -107,9 +117,9 @@ function getRandomInt(min, max) {
 	return min + Math.floor(Math.random() * (max - min + 1));
 };
 
-function setHomeScreenBubbles(){
-	var evilImg = loadImg('img/evilbubble.png');
-	var goodImg = loadImg('img/goodbubble.png');
+function setHomeScreenBubblePlay(){
+	var evilImg = loadImg('img/evilbubble0.png');
+	var goodImg = loadImg('img/goodbubble0.png');
 	var pointImg = loadImg('img/pointbubble.png');
 	
 	var r = 40;
@@ -121,10 +131,12 @@ function setHomeScreenBubbles(){
 	var yPoint= app.canvasHeight/2;
 	
 	function _draw(){
-		app.ctx.drawImage(evilImg, xEvil, yEvil, 2*r, 2*r);
-		app.ctx.drawImage(goodImg, xGood, yGood, 2*r, 2*r);
-		app.ctx.drawImage(pointImg, xPoint, yPoint, r, r);
+		app.ctxMain.drawImage(evilImg, xEvil, yEvil, 2*r, 2*r);
+		app.ctxMain.drawImage(goodImg, xGood, yGood, 2*r, 2*r);
+		app.ctxMain.drawImage(pointImg, xPoint, yPoint, r, r);
+		soundIcon.draw();
 	}
+	
 	function _calculateCoordinates(dt){
 		var step = app.bubbleStartSpeed * dt;
 		xEvil += step;
@@ -151,7 +163,7 @@ function setHomeScreenBubbles(){
 	var loopStart = function() {
 		var lastFrameTime = performance.now();
 		return function(time){
-			app.ctx.clearRect(0, 0, app.canvasWidth, app.canvasHeight);
+			app.ctxMain.clearRect(0, 0, app.canvasWidth, app.canvasHeight);
 			var dt = time - lastFrameTime;
 		
 			_calculateCoordinates(dt);
@@ -166,3 +178,13 @@ function setHomeScreenBubbles(){
 	requestAnimationFrame(loopStart);
 	
 }
+
+
+function resetGameStateVariables(){
+	gameState.points = 0;
+	gameState.bubbleSpeed = app.bubbleStartSpeed;
+	gameState.startTime = performance.now();
+	gameState.totalBubbles = 0;
+	gameState.gameOver = false;
+}
+

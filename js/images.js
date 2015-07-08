@@ -2,16 +2,18 @@ function gameImages(){
 	var _imgs = {};
 	var _evilbubbles = {};
 	var _goodbubbles = {};
+	var _callbackCalled = false;
 	var _callback;
-	var keys = ['player', 'light1', 'light2', 'light3',  'pointbubble', 'blackhole'];
-	var numberImages = keys.length;
+	var keys = ['player', 'light1', 'light2', 'light3',  'pointbubble', 'blackhole' ,'soundon', 'soundoff', 'bullet'];
+	var numberImages = keys.length + 2*app.numberOfGoodEvilImages;
 	
 	 function _loadImg(source) {
 		var img = new Image();
 		img.src = source;	
 		img.onload = function(){
 			numberImages--;
-			if(numberImages<=0){
+			if(!_callbackCalled && numberImages<=0){
+				_callbackCalled = true;
 				_callback();
 			}
 		}
@@ -26,11 +28,9 @@ function gameImages(){
 			_imgs[keys[i]]= _loadImg(k+keys[i]+".png");
 		}
 		var evil = "img/evilbubble";
-		for (var i = 0; i<4; i++){
-			_evilbubbles[i] = _loadImg(evil + i + ".png");
-		}
 		var good = "img/goodbubble";
-		for (var i = 0; i<4; i++){
+		for (var i = 0; i<app.numberOfGoodEvilImages; i++){
+			_evilbubbles[i] = _loadImg(evil + i + ".png");
 			_goodbubbles[i] = _loadImg(good + i + ".png");
 		}
 	}
