@@ -17,12 +17,11 @@ body{
 }
 
 #mainCanvas { 
-	background: url("../img/bcg.png");
 	padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: none;
 	position: relative;
 	top: calc(50% - 260px);
 }
@@ -43,6 +42,7 @@ body{
 	top: calc(50% - 87px);
 	left: calc(50% - 189px);
 	width: 378px;
+	display: none;
 }
 
 .finish{
@@ -109,4 +109,6 @@ input[type = "button"] {
  input[type = "button"]:focus {
 	outline:none;
 }
+
+
 
