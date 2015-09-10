@@ -4,7 +4,7 @@ function gameImages(){
 	var _goodbubbles = {};
 	var _callbackCalled = false;
 	var _callback;
-	var keys = ['player', 'light1', 'light2', 'light3',  'pointbubble', 'blackhole' ,'soundon', 'soundoff', 'bullet'];
+	var keys = ['player', 'light1', 'light2', 'light3',  'pointbubble', 'blackhole' ,'soundon', 'soundoff', 'bullet', 'playervanish', 'playerExplode', 'bulletexplosion', 'soundon', 'soundoff', 'energyColor', 'energyBlank'];
 	var numberImages = keys.length + 2*app.numberOfGoodEvilImages;
 	
 	 function _loadImg(source) {
