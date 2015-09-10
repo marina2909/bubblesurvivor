@@ -91,7 +91,7 @@ body{
 
 
 input[type = "button"] {
-	padding: 12px;
+	padding: 12px 12px 17px 12px;
 	width: 217px;
 	background-color:#33bdef;
 	border-radius: 6px; 
