@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict'; */
 
 var animationDuration = {
 	bulletExplosion: 250,
@@ -45,46 +45,44 @@ var resetGame = function(){
 	
 	energy.reset();
 	resetGameStateVariables();
-	
-	// make sure you start the game after all images are loaded
-	images = gameImages();
-	images.load(function(){
-		requestAnimationFrame(loop);
-	});
 	entities = new Entities();
 	
+	requestAnimationFrame(loop);
 }
 
 
 function load(){  
 
-	// create offset canvas
-	app.canvas  = document.createElement('canvas');
+	// create canvas
+	app.canvas  = document.getElementById("mainCanvas");
 	app.canvas.width = app.canvasWidth;
 	app.canvas.height = app.canvasHeight;
 	app.ctx = app.canvas.getContext('2d');
 	app.ctx.font="bold 25px Arial";
 	app.ctx.fillStyle = "white";
 	
-	// create main canvas
-	app.canvasMain= document.getElementById("mainCanvas");
-	app.canvasMain.width = app.canvasWidth;
-	app.canvasMain.height = app.canvasHeight;
-	app.ctxMain = app.canvasMain.getContext('2d');
 	
 	keysDown = new keysDown();
 	sounds = new Sounds();
+	
+	// make sure you start the game after all images are loaded
+	images = gameImages();
+	images.load(function(){
+		app.canvas.style.display='block';
+		document.getElementsByClassName("start")[0].style.display='block';
+		setHomeScreenBubblePlay();
+		/* sounds.introSound.play(); */
+	});
+	
 	energy = energy();
 	
 	var soundSlider = slider();
 	soundIcon = soundicon();
 	soundIcon.setActionOnClick(function(){
-		soundSlider.show(soundIcon.getCanvasX()  + app.canvasMain.offsetLeft, soundIcon.getCanvasY() + app.canvasMain.offsetTop);
+		soundSlider.show(soundIcon.getCanvasX()  + app.canvas.offsetLeft, soundIcon.getCanvasY() + app.canvas.offsetTop);
 	});
 	
-	setHomeScreenBubblePlay();
-	sounds.introSound.play();
-	
+
 	document.getElementById('startbtn').addEventListener('click', function(){
 		document.getElementsByClassName('start')[0].style.display = "none";
 		gameState.gameStart = true;
@@ -93,7 +91,7 @@ function load(){
 	
 	document.getElementById('restartbtn').addEventListener('click', function(){
 		document.getElementsByClassName('finish')[0].style.display = "none";
-		resetGame();     
+		resetGame();    
 	}, false);
 	
 	document.addEventListener('click', function(e){
@@ -102,6 +100,7 @@ function load(){
 		}
 	});
 	
+	document.getElementsByClassName('start')[0].style.display = "block";
 	document.getElementById('startbtn').focus();
 	
 }
@@ -118,9 +117,9 @@ function getRandomInt(min, max) {
 };
 
 function setHomeScreenBubblePlay(){
-	var evilImg = loadImg('img/evilbubble0.png');
-	var goodImg = loadImg('img/goodbubble0.png');
-	var pointImg = loadImg('img/pointbubble.png');
+	var evilImg = images.evilbubbles[0];
+	var goodImg =  images.goodbubbles[0]
+	var pointImg =  images.imgs['pointbubble'];
 	
 	var r = 40;
 	var xEvil = 0;
@@ -130,10 +129,11 @@ function setHomeScreenBubblePlay(){
 	var xPoint = 0;
 	var yPoint= app.canvasHeight/2;
 	
-	function _draw(){
-		app.ctxMain.drawImage(evilImg, xEvil, yEvil, 2*r, 2*r);
-		app.ctxMain.drawImage(goodImg, xGood, yGood, 2*r, 2*r);
-		app.ctxMain.drawImage(pointImg, xPoint, yPoint, r, r);
+	function _draw(time){
+		drawBcg(time);
+		app.ctx.drawImage(evilImg, xEvil, yEvil, 2*r, 2*r);
+		app.ctx.drawImage(goodImg, xGood, yGood, 2*r, 2*r);
+		app.ctx.drawImage(pointImg, xPoint, yPoint, r, r);
 		soundIcon.draw();
 	}
 	
@@ -163,11 +163,11 @@ function setHomeScreenBubblePlay(){
 	var loopStart = function() {
 		var lastFrameTime = performance.now();
 		return function(time){
-			app.ctxMain.clearRect(0, 0, app.canvasWidth, app.canvasHeight);
+			app.ctx.clearRect(0, 0, app.canvasWidth, app.canvasHeight);
 			var dt = time - lastFrameTime;
 		
 			_calculateCoordinates(dt);
-			_draw();
+			_draw(time);
 			
 			lastFrameTime = time;
 			if (!gameState.gameStart){
@@ -187,4 +187,14 @@ function resetGameStateVariables(){
 	gameState.totalBubbles = 0;
 	gameState.gameOver = false;
 }
+
+var drawBcg = (function(){
+	var background = loadImg("img/bcg.png");
+	var backgroundWidth = app.canvasWidth - app.energyWidth;
+	return function(totalTime){
+		var x = (Math.round(totalTime*app.backgroundImgSpeed)) % backgroundWidth;
+		app.ctx.drawImage(background, app.energyWidth - x, 0);
+		app.ctx.drawImage(background, app.canvasWidth - x, 0);
+	}
+})();
 

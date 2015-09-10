@@ -7,7 +7,6 @@ function Vanish(x, y, r){
 	this._rEnd = 0;
 	this._startTime = performance.now();
 	this._opacityStart = 1;
-	
 }
 Vanish.prototype = Object.create(Entity.prototype);
 Vanish.prototype.constructor = Vanish;
@@ -25,7 +24,7 @@ Vanish.prototype.updatePosition = function(dt){
 Vanish.prototype.draw = function(){
 	app.ctx.save();
 	app.ctx.globalAlpha = this._opacity ;
-	app.ctx.drawImage(this._sprite, this._x - this._r, this._y - this._r, 2 * this._r, 2 * this._r);
+	app.ctx.drawImage(this._sprite(), this._x - this._r, this._y - this._r, 2 * this._r, 2 * this._r);
 	app.ctx.restore();
 }
 
@@ -47,10 +46,18 @@ function BubbleVanish(x, y, r, type){
 BubbleVanish.prototype = Object.create(Vanish.prototype);
 BubbleVanish.prototype.constructor = BubbleVanish;
 
-BubbleVanish.prototype._spriteGoodBubble= loadImg('img/goodbubble.png');
-BubbleVanish.prototype._spriteEvilBubble = loadImg('img/evilbubble.png');
-BubbleVanish.prototype._spritePointBubble = loadImg('img/pointbubble.png');
-BubbleVanish.prototype._spriteExplode = loadImg('img/bubbleexplosion.png');
+BubbleVanish.prototype._spriteGoodBubble = function(){
+	return loadImg('img/goodbubble.png');
+}
+BubbleVanish.prototype._spriteEvilBubble = function(){
+	return loadImg('img/evilbubble.png');
+} 
+BubbleVanish.prototype._spritePointBubble = function(){
+	return loadImg('img/pointbubble.png');
+} 
+BubbleVanish.prototype._spriteExplode = function(){
+	return  loadImg('img/bubbleexplosion.png');
+}
 
 BubbleVanish.prototype._fAnimation = function(t){
 	return  3.3 * t * t - 2.3 * t;
@@ -71,7 +78,10 @@ function BulletVanish(x, y, r){
 }
 BulletVanish.prototype = Object.create(Vanish.prototype);
 BulletVanish.prototype.constructor = BulletVanish;
-BulletVanish.prototype._sprite = loadImg('img/bulletexplosion.png');
+BulletVanish.prototype._sprite =  function(){
+	return images.imgs['bulletexplosion'];
+}
+
 BulletVanish.prototype._fAnimation = function(t){
 	return  Math.pow(t, 0.5);
 }
@@ -117,7 +127,10 @@ function PlayerVanish(x, y, w, h, blackHole){
 	this._xStart = x;
 	this._yStart = y;
 	if (blackHole != null) {
-		this._sprite = this._playerVanishSprite;
+		this._sprite = function(){
+			return images.imgs['playervanish'];
+		}
+
 		this._wStart = w;
 		this._hStart = h;
 		this._xEnd = blackHole.x;
@@ -125,7 +138,9 @@ function PlayerVanish(x, y, w, h, blackHole){
 		this._fAnimation = this._fAnimationVanish;
 	}
 	else { 
-		this._sprite = this._playerExplodeSprite;
+		this._sprite = function(){
+			return images.imgs['playerExplode'];
+		}
 		this._wStart = 100;
 		this._hStart = 100;
 		this._xEnd = this._xStart;
@@ -136,8 +151,6 @@ function PlayerVanish(x, y, w, h, blackHole){
 }
 PlayerVanish.prototype = Object.create(Vanish.prototype);
 PlayerVanish.prototype.constructor = PlayerVanish;
-PlayerVanish.prototype._playerVanishSprite = loadImg('img/playerVanish.png');
-PlayerVanish.prototype._playerExplodeSprite = loadImg('img/playerExplode.png');
 PlayerVanish.prototype.isInside = function(){
 	return (this._x) >= 0;
 }
@@ -167,7 +180,7 @@ PlayerVanish.prototype.updatePosition = function(dt){
 PlayerVanish.prototype.draw = function(){
 	app.ctx.save();
 	app.ctx.globalAlpha = this._opacity ;
-	app.ctx.drawImage(this._sprite, this._x - this._w/2, this._y - this._h/2, this._w, this._h);
+	app.ctx.drawImage(this._sprite(), this._x - this._w/2, this._y - this._h/2, this._w, this._h);
 	app.ctx.restore();
 }
 
