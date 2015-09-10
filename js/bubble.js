@@ -55,7 +55,6 @@ Bubble.prototype.updatePosition = function(dt, entities){
 }
 Bubble.prototype.draw = function(){
 	app.ctx.save();
-	app.ctx.globalAlpha = this._opacity ;
 	app.ctx.drawImage(this.sprite(), this._x - this._r, this._y - this._r);
 	app.ctx.restore();
 }

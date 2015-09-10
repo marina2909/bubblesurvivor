@@ -29,17 +29,17 @@ var draw = function(){
 	}
 	
 	return function(totalTime){
-	
-		var x = (totalTime*app.backgroundImgSpeed ) % backgroundWidth;
-		app.ctx.drawImage(background, app.energyWidth - x, 0);
-		app.ctx.drawImage(background, app.canvasWidth - x, 0);
-     
+
+		
+		app.ctx.clearRect(0, 0, app.canvasWidth, app.canvasHeight);
+		
+		drawBcg(totalTime);
+		
 		_drawEntities();
 		energy.draw();
 		
 		app.ctx.fillText(gameState.points, app.pointsX, app.pointsY);
 
-		app.ctxMain.drawImage(app.canvas,0,0); 
 		
 	}
 }();
