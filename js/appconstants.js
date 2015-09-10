@@ -15,7 +15,7 @@ var app = {
 	pointsX: 35,
 	pointsY: 500,
 	
-	bubbleAccStep: 0.0000001,
+	bubbleAccStep: 0.0000025,
 	levelChangeStep: 50000,
 	playerSpeed: 0.3, 
 	bulletSpeed: 0.3, 
