@@ -3,8 +3,8 @@ function slider() {
 	var _range = document.getElementsByClassName("slider")[0];
 
 	_range.addEventListener("input", function(){
-		app.volume = _range.value;
-		sounds.introSound.update();
+		app.volume = Math.exp(_range.value) - 1;
+		sounds.pointSound.play();
 	});
 	
 	 function _isClicked(e){
