@@ -1,6 +1,6 @@
 function soundicon(){
-	var _imgOn = loadImg("img/soundon.png"); 
-	var _imgOff = loadImg("img/soundoff.png");
+	var _imgOn =  images.imgs['soundon']; 
+	var _imgOff =  images.imgs['soundoff'];
 	var _img = _imgOn;
 	var _actionOnClick = function(){};
 	var _canvasX = app.canvasWidth - 45;
@@ -8,8 +8,8 @@ function soundicon(){
 	var _r = 13;	
 	
 	function _isClicked(e){
-		var mouseCanvasX= e.pageX - app.canvasMain.offsetLeft;
-		var mouseCanvasY = e.pageY - app.canvasMain.offsetTop;
+		var mouseCanvasX= e.pageX - app.canvas.offsetLeft;
+		var mouseCanvasY = e.pageY - app.canvas.offsetTop;
 		return (_canvasX -_r <  mouseCanvasX)  &&  (mouseCanvasX < _canvasX +_r) &&  (_canvasY -_r <  mouseCanvasY) && (mouseCanvasY < _canvasY +_r);
 	}
 	
@@ -20,7 +20,7 @@ function soundicon(){
 	}
 	
 	var _draw = function(){
-		app.ctxMain.drawImage(_img, _canvasX -_r, _canvasY -_r);
+		app.ctx.drawImage(_img, _canvasX -_r, _canvasY -_r);
 	}	
 	
 	return {
