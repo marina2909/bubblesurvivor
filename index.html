@@ -31,32 +31,29 @@
 			<div class="start">
 				<div class="title">Bubble Survivor</div>
 				<input type="button" id="startbtn" value="Start"/>
+				<div  class='rulesLink'>
+					Click here for instructions
+				</div>
 			</div>
-			
+		
 			<div class="finish">
 				<div class="finishTxt">You lose</div>
 				<div class="totalPoints"></div>
 				<input type="button" id="restartbtn" value="Start new game"/>
 			</div>
+			<div class="rules">
+			Goal for this game is to collect as much points as possible until energy is gone. 
+			</p>
+			Good bubbles(green) gives you energy and evil bubbles(red) take away your energy and it all depend of their size.
+			</p>
+			You can see your energy on the left side.
+			</p>
+			Be careful of the black hole's gravitational force.
+			</p>
+			<input type="button" id="closeRulesBtn" value="Close"/>
+			</div>
 		
 		</div>
-
-		
-		 <audio id='blackholeSound'>
-			<source src='sounds/blackhole.wav' type='audio/wav'>
-		</audio>
-		  <audio id='explosionSound'>
-			<source src='sounds/explosion.wav' type='audio/wav'>
-		</audio>
-		<audio id='bubbleSound'>
-			<source src='sounds/bubble.wav' type='audio/wav'>
-		</audio>
-		<audio id='pointSound'>
-			<source src='sounds/point.wav' type='audio/wav'>
-		</audio>
-		<audio id='shootSound'>
-			<source src='sounds/shoot.wav' type='audio/wav'>
-		</audio>
 		
 		<input class="slider" type="range"   orient="vertical" min="0" max="1" step="0.05" value="0.5"/>
 	</body>

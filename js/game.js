@@ -94,6 +94,14 @@ function load(){
 		resetGame();    
 	}, false);
 	
+	document.getElementsByClassName('rulesLink')[0].addEventListener('click', function(){
+		document.getElementsByClassName('rules')[0].style.display = "block";
+	}, false);
+	
+	document.getElementById('closeRulesBtn').addEventListener('click', function(){
+		document.getElementsByClassName('rules')[0].style.display = "none";
+	}, false);
+	
 	document.addEventListener('click', function(e){
 		if (!soundSlider.isClicked(e) && !soundIcon.isClicked(e)){
 			soundSlider.hide();

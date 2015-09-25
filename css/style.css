@@ -110,5 +110,30 @@ input[type = "button"] {
 	outline:none;
 }
 
+.rulesLink{
+	display: block;
+	font: bold 16px 'Happy Sans', cursive;
+	text-shadow: none;
+	color: white;
+	margin-top: 5px;
+	cursor:pointer;
+}
+
+.rules{
+	position: absolute;
+	text-align: center;
+	top: calc(30% - 87px);
+	left: calc(50% - 189px);
+	width: 378px;
+	font: bold 16px 'Happy Sans', cursive;
+	text-shadow: none;
+	display: none;
+	background-color: white;
+	padding: 22px;
+}
+
+#closeRulesBtn{
+
+}
 
 
