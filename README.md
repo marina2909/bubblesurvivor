@@ -9,7 +9,7 @@ Getting started
 
 Goal for this game is to collect as much points as possible until energy is gone. 
 
-Good bubbles(green) gives you energy and evil bubbles(red) take away your energy and it all depends of their size.
+Green bubbles give you energy and red bubbles take away your energy depending on their size.
 
 You can see your energy on the left side.
 
