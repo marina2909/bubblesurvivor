@@ -1,7 +1,7 @@
 BubbleSurvive
 =========================
 
-This is a my web game bult in HTML5 and Javascript and without use of any additional frameworks, engines or libraries.
+This is web game bult in HTML5 and Javascript and without use of any additional frameworks, engines or libraries.
 
 
 Getting started
