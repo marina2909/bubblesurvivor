@@ -1,4 +1,4 @@
-BubbleSurvive
+BubbleSurviver
 =========================
 
 This is web game bult in HTML5 and Javascript and without use of any additional frameworks, engines or libraries.
